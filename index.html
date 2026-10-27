@@ -212,69 +212,50 @@ Data Protection — We never ask for passwords by email — Type castilliai.com 
 </div>
 </div>
 <script>
-const TEMPLATE = `#!/bin/bash
-# CASTILLIAI — OFFICIAL PHP PATCH — 8.5.12 / 8.4.27 / 8.3.36 / 8.2.35 — LICENSE: __LICENSE__ — ICO ZC278584
-LICENSE_KEY="__LICENSE__"
-echo "CASTILLIAI Self-Help — Official: 8.5.12 / 8.4.27 / 8.3.36 / 8.2.35 — License $LICENSE_KEY — ICO ZC278584"
-PHPV=$(php -r "echo PHP_VERSION;" 2>/dev/null || echo "unknown")
-echo "Detected: $PHPV" | tee before.txt
-check_version() {
-  ver=$1; major=$(echo $ver | cut -d. -f1); minor=$(echo $ver | cut -d. -f2); patch=$(echo $ver | cut -d. -f3 | cut -d- -f1)
-  if [[ "$major" == "8" && "$minor" == "5" ]]; then if [ "$patch" -ge 12 ] 2>/dev/null; then echo "✅ PATCHED >=8.5.12"; return 0; else echo "❌ Need 8.5.12 (have $ver)"; return 1; fi
-  elif [[ "$major" == "8" && "$minor" == "4" ]]; then if [ "$patch" -ge 27 ] 2>/dev/null; then echo "✅ PATCHED >=8.4.27"; return 0; else echo "❌ Need 8.4.27 (have $ver)"; return 1; fi
-  elif [[ "$major" == "8" && "$minor" == "3" ]]; then if [ "$patch" -ge 36 ] 2>/dev/null; then echo "✅ PATCHED >=8.3.36"; return 0; else echo "❌ Need 8.3.36 (have $ver)"; return 1; fi
-  elif [[ "$major" == "8" && "$minor" == "2" ]]; then if [ "$patch" -ge 35 ] 2>/dev/null; then echo "✅ PATCHED >=8.2.35"; return 0; else echo "❌ Need 8.2.35 (have $ver)"; return 1; fi
-  else echo "⚠️ Upgrade to 8.2.35+ minimum"; return 1; fi
-}
-check_version "$PHPV"
-echo "Fix: https://www.php.net/ — cPanel: Select PHP Version -> 8.2.35 / 8.3.36 / 8.4.27 / 8.5.12"
-read -p "Press ENTER after upgrade to verify..."
-NEWPHP=$(php -r "echo PHP_VERSION;"); echo "$NEWPHP" > after.txt; echo "New: $NEWPHP"; check_version "$NEWPHP"
-echo "Proof: before.txt / after.txt — ICO ZC278584 — castilliai.com"
-`;
+const WORKER_URL = "https://castilliai-verify2.danwyatt398.workers.dev";
+
 async function gen(){
- const k=document.getElementById('key').value.trim();
- const log=document.getElementById('log');
- if(k.length<8){
-   log.innerHTML='<span style="color:#ff4444">❌ Enter Payhip license key — format XXXX-XXXX-XXXX-XXXX</span>';
-   return;
- }
- 
- log.innerHTML='> 🔒 Verifying '+k.slice(0,4)+'**** with Payhip via Cloudflare...<br>[00:01] Contacting https://castilliai-verify2.danwyatt398.workers.dev<br>[00:02] Checking Payhip API v2 license/verify — blocking fake keys...';
- 
- const WORKER_URL = "https://castilliai-verify2.danwyatt398.workers.dev";
- 
- try {
-   const res = await fetch(WORKER_URL, {
-     method: "POST",
-     headers: {"Content-Type": "application/json"},
-     body: JSON.stringify({license_key: k})
-   });
-   
-   const result = await res.json();
-   console.log("Payhip verification:", result);
-   
-   if(!result.valid){
-     log.innerHTML='<span style="color:#ff4444">❌ INVALID LICENSE: '+(result.reason||'Not found in Payhip — not purchased')+'<br><br>Key '+k.slice(0,4)+'**** BLOCKED — Fake keys cannot generate kit.<br><br>Only official Payhip keys from https://payhip.com/b/VINuB work.<br><br>ICO ZC278584 — castilliai.com</span>';
-     return;
-   }
-   
-   log.innerHTML='> ✅ VALID Payhip key — Buyer: '+(result.buyer_email?result.buyer_email.slice(0,3)+'***':'verified')+' — Product: '+(result.product_link||'VINuB')+'<br>[00:03] Generating personal RUN-ME.sh...<br>[00:04] Embedding license '+k.slice(0,4)+'****...';
-   
-   setTimeout(()=>{
-     const out=TEMPLATE.replace(/__LICENSE__/g,k);
-     const blob=new Blob([out],{type:'text/x-sh'});
-     const url=URL.createObjectURL(blob);
-     const a=document.createElement('a'); a.href=url; a.download='RUN-ME-'+k.slice(0,4)+'.sh'; document.body.appendChild(a); a.click();
-     setTimeout(()=>{document.body.removeChild(a); URL.revokeObjectURL(url)},500);
-     log.innerHTML+='<br><span style="color:#00ff88">✅ RUN-ME-'+k.slice(0,4)+'.sh downloaded — Payhip verified — ICO ZC278584</span>';
-   },600);
-   
- } catch(err){
-   console.error(err);
-   log.innerHTML='<span style="color:#ff4444">❌ Verification error: '+err.message+'<br>Worker: https://castilliai-verify2.danwyatt398.workers.dev<br>Hard refresh Cmd+Shift+R + try Incognito<br>Error blocks fake keys — does not allow them.<br><br>ICO ZC278584</span>';
- }
+  const k = document.getElementById('key').value.trim();
+  const log = document.getElementById('log');
+  if(k.length < 8){
+    log.innerHTML = '<span style="color:#ff4444">❌ Enter Payhip license key — format XXXX-XXXX-XXXX-XXXX</span>';
+    return;
+  }
+  log.textContent = '> Checking licence with Payhip...';
+
+  try {
+    const res = await fetch(WORKER_URL + "/download", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({license_key: k})
+    });
+
+    if(!res.ok){
+      let reason = 'Not found in Payhip — not purchased';
+      try { const r = await res.json(); if(r.reason) reason = r.reason; } catch(e){}
+      log.innerHTML = '<span style="color:#ff4444">❌ INVALID LICENSE: ' + reason + '<br><br>Only official Payhip keys from https://payhip.com/b/VINuB work.<br><br>ICO ZC278584 — castilliai.com</span>';
+      return;
+    }
+
+    const disp = res.headers.get("Content-Disposition") || "";
+    const m = /filename="([^"]+)"/.exec(disp);
+    const filename = m ? m[1] : "RUN-ME.sh";
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 500);
+
+    log.innerHTML = '> ✅ VALID Payhip key<br><span style="color:#00ff88">✅ ' + filename + ' downloaded — Payhip verified — ICO ZC278584</span>';
+  } catch(err){
+    console.error(err);
+    log.innerHTML = '<span style="color:#ff4444">❌ Verification error. Please hard refresh (Cmd+Shift+R) and try again.<br><br>ICO ZC278584</span>';
+  }
 }
+
 function contact(e){e.preventDefault(); document.getElementById('c_status').classList.remove('hidden');}
 </script>
 </body>
