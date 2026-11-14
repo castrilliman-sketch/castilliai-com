@@ -94,18 +94,8 @@ body{font-family:'JetBrains Mono',monospace;background:#050507;color:#e8e8e8}
 <div id="log" class="mt-4 bg-black p-4 text-xs text-green-400 font-mono min-h-[50px]"></div>
 </div>
 <div class="mt-12 max-w-xl border-t border-zinc-800 pt-6">
-<details>
-<summary class="cursor-pointer text-xs text-zinc-500 hover:text-zinc-300">▶ Need assistance? Request contact (small) — no passwords</summary>
-<div class="mt-4 bg-zinc-900 border border-zinc-800 p-5">
-<p class="text-sm text-zinc-400 mb-3">We do not ask for passwords via email. Send email below, we will contact you. Do not include passwords.</p>
-<form onsubmit="contact(event)" class="space-y-3">
-<input id="c_email" type="email" required placeholder="your@email.com" class="w-full bg-black border border-zinc-700 px-3 py-2 text-sm">
-<textarea id="c_msg" placeholder="Hosting type — cPanel / Ubuntu — No passwords" class="w-full bg-black border border-zinc-700 px-3 py-2 text-sm h-20"></textarea>
-<button class="bg-zinc-800 text-white px-4 py-2 text-xs font-bold">SEND REQUEST →</button>
-</form>
-<div id="c_status" class="text-sm text-green-400 mt-3 hidden">Thanks — we will contact you. Type castilliai.com directly to return.</div>
-</div>
-</details>
+<p class="text-sm text-zinc-400 mb-3">We do not ask for passwords via email. Do not include passwords.</p>
+<a href="mailto:hello@castilliai.com" class="inline-block bg-zinc-900 border border-zinc-800 text-white px-4 py-3 text-sm font-bold hover:border-amber-500 hover:text-amber-200">Email hello@castilliai.com</a>
 </div>
 </div> <!-- end content-home -->
 <div id="content-blog" class="hidden max-w-4xl mx-auto px-6 py-10">
@@ -157,7 +147,7 @@ body{font-family:'JetBrains Mono',monospace;background:#050507;color:#e8e8e8}
 <div class="text-[10px] text-amber-400 font-bold tracking-widest">ANTI-PHISHING — SECURITY</div>
 <h3 class="text-xl font-bold mt-2">We Never Ask For Your Password By Email — How to Spot PHP Phishing</h3>
 <div class="text-sm text-zinc-500 mt-1">Published: Oct 24 2026 — Security — CASTILLIAI — ICO ZC278584</div>
-<p class="text-sm text-zinc-300 mt-4 leading-relaxed">Fraudsters use PHP security scares to steal cPanel passwords. Red flags: Email says "Click here to update PHP immediately", asks for cPanel login, attachment called "php-update.zip". Real fix: Type castilliai.com directly into browser, never click email links. Our £99 kit is self-help — you run it on YOUR server, we never ask for passwords. Official source always php.net. If you get suspicious email about PHP vulns, forward to hello@castilliai.com (forwards to our Gmail via secure form). ICO Registered: ZC278584 — castilliai.com</p>
+<p class="text-sm text-zinc-300 mt-4 leading-relaxed">Fraudsters use PHP security scares to steal cPanel passwords. Red flags: Email says "Click here to update PHP immediately", asks for cPanel login, attachment called "php-update.zip". Real fix: Type castilliai.com directly into browser, never click email links. Our £99 kit is self-help — you run it on YOUR server, we never ask for passwords. Official source always php.net. If you get suspicious email about PHP vulns, email hello@castilliai.com. ICO Registered: ZC278584 — castilliai.com</p>
 <div class="mt-4 flex gap-2 text-sm">
 <a href="https://castilliai.com" class="bg-zinc-800 text-white px-4 py-3 font-bold border border-zinc-700">LEARN MORE → castilliai.com</a>
 <span class="text-zinc-500">Tags: php phishing, anti-phishing, cpanel security</span>
@@ -255,8 +245,6 @@ async function gen(){
     log.innerHTML = '<span style="color:#ff4444">❌ Verification error. Please hard refresh (Cmd+Shift+R) and try again.<br><br>ICO ZC278584</span>';
   }
 }
-
-function contact(e){e.preventDefault(); document.getElementById('c_status').classList.remove('hidden');}
 </script>
 </body>
 </html>
