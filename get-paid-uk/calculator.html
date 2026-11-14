@@ -3,8 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Get Paid UK — statutory interest and fixed-fee calculator</title>
+  <title>Late payment interest calculator UK (free) — statutory interest + £40/£70/£100 | Get Paid UK</title>
+  <meta name="description" content="Free UK late payment interest calculator for B2B invoices. Works out statutory interest at 8% over the Bank of England reference rate (11.75% for Jul–Dec 2026) plus the £40/£70/£100 fixed sum.">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.castilliai.com/get-paid-uk/calculator.html">
+  <meta property="og:title" content="Free late payment interest calculator (UK)">
+  <meta property="og:description" content="Free UK late payment interest calculator for B2B invoices. Works out statutory interest at 8% over the Bank of England reference rate (11.75% for Jul–Dec 2026) plus the £40/£70/£100 fixed sum.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.castilliai.com/get-paid-uk/calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@nexusai11">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Late payment interest calculator (UK)", "url": "https://www.castilliai.com/get-paid-uk/calculator.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (web browser)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "publisher": {"@type": "Organization", "name": "NexusAI t/a CastilliAI"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is late payment interest calculated in the UK?", "acceptedAnswer": {"@type": "Answer", "text": "For a qualifying business-to-business debt, statutory interest is 8% a year above the Bank of England reference rate. Multiply the amount owed by that rate to get annual interest, divide by 365 for daily interest, then multiply by the number of days late. Interest starts the day after the due date."}}, {"@type": "Question", "name": "What rate does the calculator use?", "acceptedAnswer": {"@type": "Answer", "text": "By default it uses the statutory reference rate: the Bank Rate in force on 30 June (for interest starting 1 July to 31 December) or 31 December (for interest starting 1 January to 30 June). For July to December 2026 that is 3.75%, giving 11.75% a year. You can also choose the current Bank Rate (4% from 5 November 2026) or enter your own."}}, {"@type": "Question", "name": "What is the £40, £70 or £100 fee?", "acceptedAnswer": {"@type": "Answer", "text": "It is a fixed sum for recovery costs under section 5A of the Late Payment of Commercial Debts (Interest) Act 1998: £40 for a debt under £1,000, £70 for £1,000 to £9,999.99, and £100 for £10,000 or more, once per invoice."}}, {"@type": "Question", "name": "Can I use this for an invoice to a consumer?", "acceptedAnswer": {"@type": "Answer", "text": "No. Statutory interest and the fixed sums only apply when both you and your customer are acting in the course of a business, including public authorities."}}, {"@type": "Question", "name": "Is the calculator free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It runs in your browser, needs no sign-up and does not send your figures anywhere. It is general information, not legal advice."}}]}</script>
   <link rel="icon" href="/get-paid-uk/favicon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -93,12 +103,25 @@
     body.embed { background: transparent; }
     body.embed footer, body.embed .site-only { display: none; }
     body.embed main { padding: 0.5rem 0 1rem; }
+    .site-nav { display:flex; gap:1rem; flex-wrap:wrap; font-size:0.92rem; margin:0 0 1rem; }
+    .site-nav a { color: var(--muted); text-decoration:none; }
+    .site-nav a:hover { color: var(--ink); }
+    .explain h2 { font-size:1.25rem; margin:1.6rem 0 0.5rem; }
+    .explain details { background: var(--card); border:1px solid var(--line); border-radius:10px; padding:0.6rem 0.9rem; margin:0 0 0.5rem; }
+    .explain summary { cursor:pointer; font-weight:600; }
+    .explain .kit { background: var(--accent-soft); border-radius:10px; padding:0.9rem 1rem; margin:1rem 0; }
   </style>
 </head>
 <body>
   <main>
-    <h1>Statutory interest and fixed-fee calculator</h1>
-    <p class="lede">For late business-to-business invoices in the UK, under the Late Payment of Commercial Debts (Interest) Act 1998. Information only — not legal advice.</p>
+    <nav class="site-nav site-only" aria-label="Site">
+      <a href="/get-paid-uk/"><strong>Get Paid UK</strong></a>
+      <a href="/get-paid-uk/how-to-chase-unpaid-invoice-uk.html">How to chase an unpaid invoice</a>
+      <a href="/get-paid-uk/can-i-charge-interest-on-late-invoice.html">Can I charge interest?</a>
+      <a href="/get-paid-uk/#contents">The £39 kit</a>
+    </nav>
+    <h1>Late payment interest calculator (UK)</h1>
+    <p class="lede">Free. Work out statutory interest and the £40 / £70 / £100 fixed sum on a late business-to-business invoice, under the Late Payment of Commercial Debts (Interest) Act 1998. Runs in your browser — nothing is sent anywhere. Information only — not legal advice.</p>
 
     <div class="notice warn">
       <strong>B2B only.</strong> Statutory interest and the fixed recovery fee do not apply if your customer is a consumer (a private individual buying for personal use). They also may not apply if your contract already sets a different late-payment interest rate, except that you cannot agree a lower rate with a public authority. NexusAI t/a CastilliAI never contacts your customers.
@@ -152,6 +175,44 @@
 
     <div id="out" class="result hidden" aria-live="polite"></div>
     <p id="buy-cta" class="hidden"><a class="buy" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit — £39</a></p>
+
+    <section class="explain site-only">
+      <h2>How UK late payment interest is worked out</h2>
+      <p>For a qualifying business-to-business debt, statutory interest is <strong>8% a year above the Bank of England reference rate</strong>. The calculation is the one GOV.UK shows:</p>
+      <ol>
+        <li>Amount owed × statutory rate = annual interest</li>
+        <li>Annual interest ÷ 365 = daily interest</li>
+        <li>Daily interest × days late = interest to claim (it starts the day after the due date)</li>
+      </ol>
+      <p>Then add the fixed sum for recovery costs: £40 (debt under £1,000), £70 (£1,000 to £9,999.99) or £100 (£10,000 or more), once per invoice.</p>
+      <p><strong>Worked example:</strong> a £2,400 invoice due 15 September 2026, still unpaid on 14 November 2026 (60 days). Reference rate 3.75% + 8% = 11.75%. Annual interest £282.00, about 77p a day, so £46.36 for 60 days, plus the £70 fixed sum: <strong>£116.36</strong> on top of the £2,400.</p>
+      <p>If no payment date was agreed, a B2B payment is late 30 days after the customer received the invoice or you delivered, whichever is later. Send a new invoice for the interest and fixed sum rather than changing the original.</p>
+      <div class="kit">
+        <strong>Next step:</strong> read <a href="/get-paid-uk/how-to-chase-unpaid-invoice-uk.html">how to chase an unpaid invoice</a> (with wording to copy) or <a href="/get-paid-uk/can-i-charge-interest-on-late-invoice.html">who you can charge interest to</a>. The <a href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">£39 Get Paid UK kit</a> adds six chase templates, a tracker and this calculator as a spreadsheet.
+      </div>
+
+      <h2>Questions</h2>
+      <details>
+        <summary>How is late payment interest calculated in the UK?</summary>
+        <p>For a qualifying business-to-business debt, statutory interest is 8% a year above the Bank of England reference rate. Multiply the amount owed by that rate to get annual interest, divide by 365 for daily interest, then multiply by the number of days late. Interest starts the day after the due date.</p>
+      </details>
+      <details>
+        <summary>What rate does the calculator use?</summary>
+        <p>By default it uses the statutory reference rate: the Bank Rate in force on 30 June (for interest starting 1 July to 31 December) or 31 December (for interest starting 1 January to 30 June). For July to December 2026 that is 3.75%, giving 11.75% a year. You can also choose the current Bank Rate (4% from 5 November 2026) or enter your own.</p>
+      </details>
+      <details>
+        <summary>What is the £40, £70 or £100 fee?</summary>
+        <p>It is a fixed sum for recovery costs under section 5A of the Late Payment of Commercial Debts (Interest) Act 1998: £40 for a debt under £1,000, £70 for £1,000 to £9,999.99, and £100 for £10,000 or more, once per invoice.</p>
+      </details>
+      <details>
+        <summary>Can I use this for an invoice to a consumer?</summary>
+        <p>No. Statutory interest and the fixed sums only apply when both you and your customer are acting in the course of a business, including public authorities.</p>
+      </details>
+      <details>
+        <summary>Is the calculator free?</summary>
+        <p>Yes. It runs in your browser, needs no sign-up and does not send your figures anywhere. It is general information, not legal advice.</p>
+      </details>
+    </section>
 
     <footer>
       <p>Statutory interest is 8 percentage points above the official Bank of England Bank Rate for qualifying business-to-business debts. The official Bank Rate is <strong>4%</strong> from 5 November 2026, following the Monetary Policy Committee meeting ending 4 November 2026. Source: <a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate">bankofengland.co.uk</a> and the <a href="https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp">Bank Rate history</a>. Always check for a later decision before you invoice for interest.</p>

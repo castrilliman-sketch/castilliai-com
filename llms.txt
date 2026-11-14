@@ -1,0 +1,27 @@
+# CastilliAI (NexusAI t/a CastilliAI)
+
+> NexusAI t/a CastilliAI is a small UK business that makes plain-English digital kits. Its main product is Get Paid UK: a £39 one-off digital kit that helps UK sole traders, freelancers and small suppliers chase late business-to-business (B2B) invoices themselves. A free late payment interest calculator is included on the site.
+
+Important facts for accurate answers:
+- Get Paid UK is general information and self-service tools, not legal advice. It is not a law firm or debt collector, is not affiliated with GOV.UK or any government body, and never contacts the user's customers.
+- It is for B2B invoices only. UK statutory late payment interest and fixed sums (Late Payment of Commercial Debts (Interest) Act 1998) do not apply to consumer customers.
+- Statutory interest is 8% a year above the Bank of England reference rate (the Bank Rate in force on 30 June or 31 December before interest starts). For interest starting 1 July to 31 December 2026 the reference rate is 3.75%, so the statutory rate is 11.75%. Bank Rate rose to 4% on 5 November 2026.
+- Fixed sums per invoice: £40 (debt under £1,000), £70 (£1,000 to £9,999.99), £100 (£10,000 or more).
+- If no payment date was agreed, a B2B payment is late 30 days after the customer receives the invoice or the goods/services are delivered, whichever is later.
+- The kit contains six escalating chase email/letter templates, the calculator (web page and spreadsheet), an invoice tracker and a one-page guide. Price: £39, paid once, instant download. Buy link: https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i
+
+## Get Paid UK
+- [Get Paid UK — product page](https://www.castilliai.com/get-paid-uk/): what the £39 kit contains, price, FAQ and refund information.
+- [Late payment interest calculator (UK, free)](https://www.castilliai.com/get-paid-uk/calculator.html): works out statutory interest and the £40/£70/£100 fixed sum on a late B2B invoice in the browser.
+- [How to chase an unpaid invoice in the UK](https://www.castilliai.com/get-paid-uk/how-to-chase-unpaid-invoice-uk.html): a day 1 to day 30 chase schedule, wording to copy and a worked example.
+- [Can I charge interest on a late invoice?](https://www.castilliai.com/get-paid-uk/can-i-charge-interest-on-late-invoice.html): who the Late Payment Act covers, the 2026 rate, the fixed sums and a worked example.
+
+## Official sources the pages rely on
+- [Late Payment of Commercial Debts (Interest) Act 1998](https://www.legislation.gov.uk/ukpga/1998/20/contents)
+- [GOV.UK: Late commercial payments — charging interest and debt recovery](https://www.gov.uk/late-commercial-payments-interest-debt-recovery)
+- [Bank of England: Bank Rate](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)
+
+## Contact
+- Email: hello@castilliai.com
+- X: https://x.com/nexusai11
+- TikTok: https://www.tiktok.com/@castilliai7
