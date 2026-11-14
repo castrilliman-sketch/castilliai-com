@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /get-paid-uk/dl-
-Disallow: /php-kit/dl-
 Sitemap: https://www.castilliai.com/sitemap.xml
