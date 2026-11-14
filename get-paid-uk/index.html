@@ -22,8 +22,6 @@
       --card: #fffcf6;
       --accent: #1c5c45;
       --accent-dark: #134434;
-      --warn-bg: #f6eedc;
-      --warn: #5c4a20;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -87,7 +85,6 @@
       border: 1px solid var(--accent);
     }
     .btn.ghost:hover { background: #e6f0eb; color: var(--accent-dark); }
-    .btn.placeholder { position: relative; }
     .note { font-size: 0.9rem; color: var(--muted); }
     section { padding: 2.4rem 0; border-top: 1px solid var(--line); }
     h2 {
@@ -125,15 +122,6 @@
       letter-spacing: -0.03em;
     }
     .price small { font-size: 1rem; color: var(--muted); font-family: "Segoe UI", system-ui, sans-serif; letter-spacing: 0; }
-    #buy .placeholder-note {
-      background: var(--warn-bg);
-      border: 1px solid #e2d3a8;
-      color: var(--warn);
-      border-radius: 10px;
-      padding: 0.8rem 1rem;
-      margin: 1rem 0 0;
-      font-size: 0.95rem;
-    }
     iframe.calc {
       width: 100%;
       border: 0;
@@ -229,10 +217,9 @@
         <h2>The kit is £39, paid once</h2>
         <div class="price-box">
           <div>
-            <p class="price">£39 <small>one-off, instant download once checkout is live</small></p>
+            <p class="price">£39 <small>one-off, instant download</small></p>
             <p class="lede" style="margin-top:0.6rem">For UK sole traders, freelancers and small suppliers dealing with late B2B invoices. Use it yourself, on your own letterhead.</p>
-            <a class="btn placeholder" href="#buy" aria-describedby="buy-placeholder">Buy the Get Paid UK kit — £39</a>
-            <p id="buy-placeholder" class="placeholder-note"><strong>Checkout is not live yet.</strong> This Buy button is a placeholder and does not take payment. The kit is finished and ready to sell at £39. A payment link will be added here when checkout is set up.</p>
+            <a class="btn" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit — £39</a>
           </div>
         </div>
       </div>
@@ -259,12 +246,12 @@
 
         <details>
           <summary>How do I get the files?</summary>
-          <p>Once checkout is live, you will receive an instant download of the kit after payment. Until then, the Buy button on this page is a placeholder and does not take payment. The calculator above is free to use in the meantime.</p>
+          <p>After you pay, you get an instant download of the kit. The calculator above is free to use.</p>
         </details>
 
         <details>
           <summary>Can I cancel or get a refund?</summary>
-          <p>If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. We will ask for that acknowledgement at checkout when payment is live. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:hello@castilliai.com">hello@castilliai.com</a>.</p>
+          <p>If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:hello@castilliai.com">hello@castilliai.com</a>.</p>
         </details>
 
         <details>

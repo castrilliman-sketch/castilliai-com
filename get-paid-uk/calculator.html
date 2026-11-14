@@ -78,6 +78,17 @@
     .error { color: #8b1e1e; font-weight: 600; }
     footer { margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem; }
     a { color: var(--accent); }
+    a.buy {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      margin-top: 0.75rem;
+    }
+    a.buy:hover { filter: brightness(1.05); color: #fff; }
     .hidden { display: none; }
     body.embed { background: transparent; }
     body.embed footer, body.embed .site-only { display: none; }
@@ -140,6 +151,7 @@
     </form>
 
     <div id="out" class="result hidden" aria-live="polite"></div>
+    <p id="buy-cta" class="hidden"><a class="buy" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit — £39</a></p>
 
     <footer>
       <p>Statutory interest is 8 percentage points above the official Bank of England Bank Rate for qualifying business-to-business debts. The official Bank Rate is <strong>4%</strong> from 5 November 2026, following the Monetary Policy Committee meeting ending 4 November 2026. Source: <a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate">bankofengland.co.uk</a> and the <a href="https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp">Bank Rate history</a>. Always check for a later decision before you invoice for interest.</p>
@@ -333,7 +345,11 @@
     });
 
     function row(k, v) { return "<tr><th>" + k + "</th><td>" + v + "</td></tr>"; }
-    function show(html) { out.innerHTML = html; out.classList.remove("hidden"); }
+    function show(html) {
+      out.innerHTML = html;
+      out.classList.remove("hidden");
+      document.getElementById("buy-cta").classList.remove("hidden");
+    }
     document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
   </script>
 </body>
