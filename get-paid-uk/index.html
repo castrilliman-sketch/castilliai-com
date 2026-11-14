@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Paid UK — a kit for chasing late invoices</title>
+  <meta name="description" content="A £39 digital kit for UK sole traders, freelancers and small B2B suppliers chasing late invoices. Templates, a tracker and a free statutory interest calculator. NexusAI t/a CastilliAI.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.castilliai.com/get-paid-uk/">
+  <link rel="icon" href="/get-paid-uk/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Get Paid UK — a kit for chasing late invoices">
+  <meta property="og:description" content="Get paid for work you’ve already done. A straightforward £39 kit for UK businesses chasing late invoices, with a free statutory interest calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.castilliai.com/get-paid-uk/">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root {
+      --ink: #162127;
+      --muted: #4d5c66;
+      --line: #d9d3c7;
+      --paper: #f3efe6;
+      --card: #fffcf6;
+      --accent: #1c5c45;
+      --accent-dark: #134434;
+      --warn-bg: #f6eedc;
+      --warn: #5c4a20;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 18px/1.55 "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-dark); }
+    header, main, footer { }
+    .wrap { width: min(960px, calc(100% - 2rem)); margin: 0 auto; }
+    .site-header {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .site-header .wrap, .site-footer .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .wordmark {
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+    .wordmark span { color: var(--accent); }
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav a:hover { color: var(--ink); }
+    .hero { padding: 3.4rem 0 2.4rem; }
+    h1 {
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+      font-size: clamp(2.1rem, 5vw, 3.15rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 0 0 1rem;
+      font-weight: 600;
+      max-width: 14ch;
+    }
+    .lede { font-size: 1.15rem; color: var(--muted); max-width: 38rem; margin: 0 0 1.6rem; }
+    .actions { display: flex; gap: 0.7rem; flex-wrap: wrap; align-items: center; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.7rem 1.15rem;
+      border-radius: 8px;
+    }
+    .btn:hover { background: var(--accent-dark); color: #fff; }
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent-dark);
+      border: 1px solid var(--accent);
+    }
+    .btn.ghost:hover { background: #e6f0eb; color: var(--accent-dark); }
+    .btn.placeholder { position: relative; }
+    .note { font-size: 0.9rem; color: var(--muted); }
+    section { padding: 2.4rem 0; border-top: 1px solid var(--line); }
+    h2 {
+      font-family: Georgia, "Iowan Old Style", Palatino, serif;
+      font-size: 1.7rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 1rem;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.15rem 1.2rem;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 1rem; }
+    .price-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .price {
+      font-family: Georgia, Palatino, serif;
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: -0.03em;
+    }
+    .price small { font-size: 1rem; color: var(--muted); font-family: "Segoe UI", system-ui, sans-serif; letter-spacing: 0; }
+    #buy .placeholder-note {
+      background: var(--warn-bg);
+      border: 1px solid #e2d3a8;
+      color: var(--warn);
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0 0;
+      font-size: 0.95rem;
+    }
+    iframe.calc {
+      width: 100%;
+      border: 0;
+      min-height: 1080px;
+      background: transparent;
+    }
+    details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.7rem 1rem;
+      margin: 0 0 0.55rem;
+    }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 0.6rem 0 0.2rem; color: var(--muted); }
+    .disclaimer {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 1.4rem 0 2rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .site-footer a { color: var(--ink); text-decoration: none; }
+    .site-footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/get-paid-uk/">Get Paid <span>UK</span></a>
+      <nav aria-label="Page sections">
+        <a href="#contents">What’s inside</a>
+        <a href="#calculator">Free calculator</a>
+        <a href="#buy">Price</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero wrap">
+      <h1>Get paid for work you’ve already done.</h1>
+      <p class="lede">A straightforward digital kit for UK sole traders, freelancers and small B2B suppliers chasing late invoices. You send the chases. We never contact your customers.</p>
+      <div class="actions">
+        <a class="btn" href="#calculator">Try the free calculator</a>
+        <a class="btn ghost" href="#contents">See what’s in the kit</a>
+      </div>
+    </div>
+
+    <section id="contents">
+      <div class="wrap">
+        <h2>What’s inside</h2>
+        <p class="lede">A one-off download you keep. Open the files in a browser or spreadsheet — no account and no subscription.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>Escalating chase templates</h3>
+            <p>Six ready-to-edit emails and letters: a polite reminder before the due date, then day 1, day 7, day 14, a day 30 final notice, and a formal final request written as your own letter — not a solicitor’s letter.</p>
+          </article>
+          <article class="card">
+            <h3>Statutory interest calculator</h3>
+            <p>Work out interest at 8% above Bank of England Bank Rate, plus the fixed recovery fee of £40, £70 or £100, under the Late Payment of Commercial Debts (Interest) Act 1998. Included as a web page and a spreadsheet.</p>
+          </article>
+          <article class="card">
+            <h3>Invoice tracker</h3>
+            <p>A spreadsheet to record invoices, due dates, chases and amounts outstanding, including suggested interest and fees on overdue business-to-business invoices.</p>
+          </article>
+          <article class="card">
+            <h3>One-page plain-English guide</h3>
+            <p>When a payment is late, what you can add, and a calm sequence for chasing it, with links to official GOV.UK pages. Clear that this is information, not legal advice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator">
+      <div class="wrap">
+        <h2>Free statutory interest calculator</h2>
+        <p class="lede">Check a late business-to-business invoice before you buy the kit. The same calculator is included as a file you can keep. It does not apply to consumer customers.</p>
+        <iframe class="calc" src="/get-paid-uk/calculator.html?embed=1" title="Statutory interest and fixed-fee calculator" loading="lazy"></iframe>
+        <p class="note"><a href="/get-paid-uk/calculator.html">Open the calculator on its own page</a> if you want to print a breakdown.</p>
+      </div>
+    </section>
+
+    <section id="buy">
+      <div class="wrap">
+        <h2>The kit is £39, paid once</h2>
+        <div class="price-box">
+          <div>
+            <p class="price">£39 <small>one-off, instant download once checkout is live</small></p>
+            <p class="lede" style="margin-top:0.6rem">For UK sole traders, freelancers and small suppliers dealing with late B2B invoices. Use it yourself, on your own letterhead.</p>
+            <a class="btn placeholder" href="#buy" aria-describedby="buy-placeholder">Buy the Get Paid UK kit — £39</a>
+            <p id="buy-placeholder" class="placeholder-note"><strong>Checkout is not live yet.</strong> This Buy button is a placeholder and does not take payment. The kit is finished and ready to sell at £39. A payment link will be added here when checkout is set up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2>Questions</h2>
+
+        <details open>
+          <summary>Who is this for?</summary>
+          <p>UK sole traders, freelancers and small suppliers who invoice other businesses or public authorities and want a clear way to chase late payment. It is not written for consumer debts, debt-collection agencies, or for anyone who wants a third party to contact their customers.</p>
+        </details>
+
+        <details>
+          <summary>Does statutory interest apply to consumer customers?</summary>
+          <p>No. The interest rate and fixed recovery fees under the Late Payment of Commercial Debts (Interest) Act 1998 apply to business-to-business (and business-to-public-authority) transactions. They do not apply where your customer is a consumer. The templates and calculator flag that clearly. If your contract already sets a different late-payment interest rate, statutory interest may not apply, except that you cannot agree a lower rate with a public authority.</p>
+        </details>
+
+        <details>
+          <summary>Is this legal advice? Do you contact my customers?</summary>
+          <p>No, and no. Get Paid UK is general information and a set of tools for you to use yourself. It is not legal advice and it is not a substitute for a solicitor or other qualified professional. NexusAI t/a CastilliAI never contacts your customers and does not collect debts on your behalf. Court procedures differ in England and Wales, Scotland and Northern Ireland.</p>
+        </details>
+
+        <details>
+          <summary>How do I get the files?</summary>
+          <p>Once checkout is live, you will receive an instant download of the kit after payment. Until then, the Buy button on this page is a placeholder and does not take payment. The calculator above is free to use in the meantime.</p>
+        </details>
+
+        <details>
+          <summary>Can I cancel or get a refund?</summary>
+          <p>If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. We will ask for that acknowledgement at checkout when payment is live. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:hello@castilliai.com">hello@castilliai.com</a>.</p>
+        </details>
+
+        <details>
+          <summary>Where do the interest figures come from?</summary>
+          <p>From the 1998 Act and from GOV.UK guidance on late commercial payments. Statutory interest is 8 percentage points above official Bank of England Bank Rate. The Bank Rate used in the calculator is 4% from 5 November 2026, following the Monetary Policy Committee meeting ending 4 November 2026 — see <a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate">bankofengland.co.uk</a>. By default the calculator applies the six-monthly statutory reference rate (the rate in force on the previous 30 June or 31 December). Always check for a later Bank Rate decision before you invoice for interest.</p>
+        </details>
+
+        <div class="disclaimer" style="margin-top:1.2rem">
+          This page and the Get Paid UK kit are general information for UK businesses, not legal advice. Always check the latest official guidance, starting at <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery">gov.uk/late-commercial-payments-interest-debt-recovery</a>. NexusAI t/a CastilliAI never contacts your customers.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>NexusAI t/a CastilliAI · <a href="mailto:hello@castilliai.com">hello@castilliai.com</a></div>
+      <div>
+        <a href="https://x.com/nexusai11">X @nexusai11</a>
+        ·
+        <a href="https://www.tiktok.com/@castilliai7">TikTok @castilliai7</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

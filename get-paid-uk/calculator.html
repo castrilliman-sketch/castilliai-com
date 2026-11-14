@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Paid UK — statutory interest and fixed-fee calculator</title>
+  <link rel="canonical" href="https://www.castilliai.com/get-paid-uk/calculator.html">
+  <link rel="icon" href="/get-paid-uk/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --ink: #14202a;
+      --muted: #4a5a66;
+      --line: #d7d2c8;
+      --paper: #f7f4ee;
+      --card: #fffdf8;
+      --accent: #1c5c45;
+      --accent-soft: #e6f0eb;
+      --warn: #6a4a16;
+      --warn-bg: #f6eedc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.5 "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 0.4rem; }
+    .lede { color: var(--muted); margin: 0 0 1.25rem; }
+    .notice, .result, fieldset {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      margin: 0 0 1rem;
+    }
+    .notice.warn { background: var(--warn-bg); border-color: #e2d3a8; color: var(--warn); }
+    .notice strong { color: var(--ink); }
+    label { display: block; font-weight: 600; margin: 0.7rem 0 0.25rem; }
+    .hint { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+    input, select {
+      width: 100%;
+      font: inherit;
+      padding: 0.55rem 0.65rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    @media (max-width: 600px) { .row { grid-template-columns: 1fr; } }
+    button {
+      font: inherit;
+      font-weight: 600;
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover { filter: brightness(1.05); }
+    button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 0.4rem; }
+    .totals { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.6rem; }
+    .totals div, .hero-total {
+      background: var(--accent-soft);
+      border-radius: 8px;
+      padding: 0.75rem;
+    }
+    .hero-total { margin-top: 0.75rem; }
+    .k { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .v { font-size: 1.25rem; font-weight: 700; }
+    .hero-total .v { font-size: 1.7rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.75rem; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 0.35rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; width: 55%; }
+    .error { color: #8b1e1e; font-weight: 600; }
+    footer { margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem; }
+    a { color: var(--accent); }
+    .hidden { display: none; }
+    body.embed { background: transparent; }
+    body.embed footer, body.embed .site-only { display: none; }
+    body.embed main { padding: 0.5rem 0 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Statutory interest and fixed-fee calculator</h1>
+    <p class="lede">For late business-to-business invoices in the UK, under the Late Payment of Commercial Debts (Interest) Act 1998. Information only — not legal advice.</p>
+
+    <div class="notice warn">
+      <strong>B2B only.</strong> Statutory interest and the fixed recovery fee do not apply if your customer is a consumer (a private individual buying for personal use). They also may not apply if your contract already sets a different late-payment interest rate, except that you cannot agree a lower rate with a public authority. NexusAI t/a CastilliAI never contacts your customers.
+    </div>
+
+    <form id="form" novalidate>
+      <fieldset>
+        <legend>Invoice details</legend>
+        <label for="amount">Amount owed, including VAT if VAT was charged (£)</label>
+        <input id="amount" name="amount" type="number" min="0.01" step="0.01" required placeholder="e.g. 1200.00">
+
+        <div class="row">
+          <div>
+            <label for="due">Payment due date</label>
+            <input id="due" name="due" type="date" required>
+          </div>
+          <div>
+            <label for="until">Calculate up to <span class="hint">(payment date, or today if unpaid)</span></label>
+            <input id="until" name="until" type="date" required>
+          </div>
+        </div>
+
+        <label for="customer">Customer type</label>
+        <select id="customer" name="customer">
+          <option value="b2b" selected>Another business, or a public authority</option>
+          <option value="consumer">A consumer (private individual)</option>
+        </select>
+
+        <label for="contract">Does the contract already set a late-payment interest rate?</label>
+        <select id="contract" name="contract">
+          <option value="no" selected>No — use statutory interest</option>
+          <option value="yes">Yes — statutory interest may not apply</option>
+        </select>
+
+        <label for="rateMode">Bank Rate to use</label>
+        <select id="rateMode" name="rateMode">
+          <option value="statutory" selected>Statutory reference rate (rate in force on the previous 30 June or 31 December)</option>
+          <option value="current">Current official Bank Rate (4% from 5 November 2026)</option>
+          <option value="custom">Enter a Bank Rate myself</option>
+        </select>
+        <p class="hint" id="rateHint"></p>
+        <div id="customWrap" class="hidden">
+          <label for="customRate">Bank Rate you want to use (%)</label>
+          <input id="customRate" name="customRate" type="number" min="0" step="0.01" placeholder="e.g. 4.00">
+        </div>
+
+        <button type="submit">Calculate</button>
+        <button type="button" class="secondary" id="printBtn">Print breakdown</button>
+      </fieldset>
+    </form>
+
+    <div id="out" class="result hidden" aria-live="polite"></div>
+
+    <footer>
+      <p>Statutory interest is 8 percentage points above the official Bank of England Bank Rate for qualifying business-to-business debts. The official Bank Rate is <strong>4%</strong> from 5 November 2026, following the Monetary Policy Committee meeting ending 4 November 2026. Source: <a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate">bankofengland.co.uk</a> and the <a href="https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp">Bank Rate history</a>. Always check for a later decision before you invoice for interest.</p>
+      <p>The law uses a six-monthly <em>reference rate</em>: the Bank Rate in force on 31 December (for interest that starts between 1 January and 30 June) or on 30 June (for interest that starts between 1 July and 31 December). See the Late Payment of Commercial Debts (Rate of Interest) (No. 3) Order 2002. This calculator uses that method by default. For invoices becoming overdue in July–December 2026, the reference rate is 3.75% (the rate in force on 30 June 2026), so the statutory rate is 11.75%. Daily interest follows the GOV.UK method: annual interest ÷ 365.</p>
+      <p>Fixed recovery fees are £40 (debt below £1,000), £70 (£1,000 to £9,999.99) or £100 (£10,000 or more), once per invoice. Guidance: <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery">GOV.UK late commercial payments</a>, <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt">interest</a> and <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery/claim-debt-recovery-costs">recovery costs</a>.</p>
+      <p>Get Paid UK is a product of NexusAI t/a CastilliAI. This tool is information, not legal advice. We never contact your customers.</p>
+    </footer>
+  </main>
+  <script>
+    if (new URLSearchParams(location.search).has("embed")) {
+      document.body.classList.add("embed");
+    }
+    const BANK_RATES = [
+      { from: "2024-11-07", rate: 4.75 },
+      { from: "2025-02-06", rate: 4.50 },
+      { from: "2025-05-08", rate: 4.25 },
+      { from: "2025-08-07", rate: 4.00 },
+      { from: "2025-12-18", rate: 3.75 },
+      { from: "2026-11-05", rate: 4.00 }
+    ];
+    const CURRENT_RATE = 4.00;
+    const CURRENT_FROM = "5 November 2026";
+    const MARGIN = 8;
+
+    const dueEl = document.getElementById("due");
+    const untilEl = document.getElementById("until");
+    const rateMode = document.getElementById("rateMode");
+    const customWrap = document.getElementById("customWrap");
+    const rateHint = document.getElementById("rateHint");
+    const out = document.getElementById("out");
+
+    (function initDates() {
+      const t = new Date();
+      untilEl.value = iso(t);
+      const due = new Date(t);
+      due.setDate(due.getDate() - 30);
+      dueEl.value = iso(due);
+      updateHint();
+    })();
+
+    rateMode.addEventListener("change", updateHint);
+    dueEl.addEventListener("change", updateHint);
+
+    function iso(d) {
+      const z = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
+      return z.toISOString().slice(0, 10);
+    }
+    function parseISO(s) {
+      const [y, m, d] = s.split("-").map(Number);
+      return new Date(y, m - 1, d);
+    }
+    function fmtDate(d) {
+      return d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+    }
+    function money(n) {
+      return "£" + n.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+    function bankRateOn(date) {
+      let rate = null, from = null;
+      for (const row of BANK_RATES) {
+        if (date >= parseISO(row.from)) { rate = row.rate; from = row.from; }
+      }
+      return { rate, from };
+    }
+    function referenceDate(interestStart) {
+      const y = interestStart.getFullYear();
+      const m = interestStart.getMonth();
+      if (m <= 5) return new Date(y - 1, 11, 31);
+      return new Date(y, 5, 30);
+    }
+    function daysOverdue(due, until) {
+      const a = Date.UTC(due.getFullYear(), due.getMonth(), due.getDate());
+      const b = Date.UTC(until.getFullYear(), until.getMonth(), until.getDate());
+      return Math.max(0, Math.round((b - a) / 86400000));
+    }
+    function fixedFee(amount) {
+      if (amount < 1000) return 40;
+      if (amount < 10000) return 70;
+      return 100;
+    }
+    function updateHint() {
+      customWrap.classList.toggle("hidden", rateMode.value !== "custom");
+      if (rateMode.value === "current") {
+        rateHint.textContent = "Uses the official Bank Rate of " + CURRENT_RATE.toFixed(2) + "% in force from " + CURRENT_FROM + ".";
+        return;
+      }
+      if (rateMode.value === "custom") {
+        rateHint.textContent = "Enter the Bank Rate you have checked on bankofengland.co.uk.";
+        return;
+      }
+      if (!dueEl.value) { rateHint.textContent = ""; return; }
+      const due = parseISO(dueEl.value);
+      const start = new Date(due);
+      start.setDate(start.getDate() + 1);
+      const ref = referenceDate(start);
+      const found = bankRateOn(ref);
+      if (found.rate == null) {
+        rateHint.textContent = "The due date is earlier than the Bank Rate table in this file. Choose “Enter a Bank Rate myself” and check the official history.";
+        return;
+      }
+      rateHint.textContent = "Interest would start on " + fmtDate(start) + ", so the reference date is " + fmtDate(ref) + ". Bank Rate that day was " + found.rate.toFixed(2) + "%, giving a statutory rate of " + (found.rate + MARGIN).toFixed(2) + "%.";
+    }
+
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const amount = Number(document.getElementById("amount").value);
+      const dueVal = dueEl.value;
+      const untilVal = untilEl.value;
+      const customer = document.getElementById("customer").value;
+      const contract = document.getElementById("contract").value;
+
+      if (!amount || amount <= 0 || !dueVal || !untilVal) {
+        show("<p class='error'>Please enter the amount owed and both dates.</p>");
+        return;
+      }
+      const due = parseISO(dueVal);
+      const until = parseISO(untilVal);
+      if (until < due) {
+        show("<p class='error'>The “calculate up to” date cannot be before the due date.</p>");
+        return;
+      }
+      if (customer === "consumer") {
+        show("<p class='error'>Statutory interest and the fixed recovery fee do not apply to consumer customers. This calculator is only for business-to-business (and public authority) invoices.</p>");
+        return;
+      }
+      if (contract === "yes") {
+        show("<p>Because your contract already sets a late-payment interest rate, statutory interest under the 1998 Act may not apply (you cannot use a lower rate with a public authority). Use the rate in your contract instead. This calculator has not added statutory interest or the fixed fee.</p>");
+        return;
+      }
+
+      const days = daysOverdue(due, until);
+      const start = new Date(due);
+      start.setDate(start.getDate() + 1);
+
+      let bankRate, rateNote;
+      if (rateMode.value === "current") {
+        bankRate = CURRENT_RATE;
+        rateNote = "Current official Bank Rate of " + bankRate.toFixed(2) + "% from " + CURRENT_FROM + " (GOV.UK worked example uses the current Bank Rate).";
+      } else if (rateMode.value === "custom") {
+        bankRate = Number(document.getElementById("customRate").value);
+        if (!(bankRate >= 0)) {
+          show("<p class='error'>Enter the Bank Rate you want to use.</p>");
+          return;
+        }
+        rateNote = "Bank Rate you entered: " + bankRate.toFixed(2) + "%.";
+      } else {
+        const ref = referenceDate(start);
+        const found = bankRateOn(ref);
+        if (found.rate == null) {
+          show("<p class='error'>The due date is earlier than the Bank Rate table bundled with this calculator. Enter a Bank Rate yourself from the official history.</p>");
+          return;
+        }
+        bankRate = found.rate;
+        rateNote = "Statutory reference rate: Bank Rate in force on " + fmtDate(ref) + " was " + bankRate.toFixed(2) + "%.";
+      }
+
+      const statutory = bankRate + MARGIN;
+      const annual = amount * (statutory / 100);
+      const daily = annual / 365;
+      const interestRaw = daily * days;
+      const interest = Math.round(interestRaw * 100) / 100;
+      const fee = days > 0 ? fixedFee(amount) : 0;
+      const totalAdd = Math.round((interest + fee) * 100) / 100;
+      const grand = Math.round((amount + totalAdd) * 100) / 100;
+
+      if (days === 0) {
+        show("<p>On the due date itself the invoice is not yet late, so no statutory interest or recovery fee has been added. Interest starts the day after the due date.</p>");
+        return;
+      }
+
+      show(
+        "<h2>Breakdown</h2>" +
+        "<table>" +
+        row("Invoice amount (incl. VAT if charged)", money(amount)) +
+        row("Due date", fmtDate(due)) +
+        row("Calculated up to", fmtDate(until)) +
+        row("Days overdue", days + " day" + (days === 1 ? "" : "s")) +
+        row("Bank Rate used", bankRate.toFixed(2) + "%") +
+        row("Statutory interest rate", statutory.toFixed(2) + "% a year (Bank Rate + 8%)") +
+        row("Daily interest", money(daily) + " (annual interest ÷ 365)") +
+        row("Interest for " + days + " day" + (days === 1 ? "" : "s"), money(interest)) +
+        row("Fixed recovery fee (once per invoice)", money(fee)) +
+        "</table>" +
+        "<div class='totals'>" +
+        "<div><div class='k'>Interest + fixed fee</div><div class='v'>" + money(totalAdd) + "</div></div>" +
+        "<div><div class='k'>Invoice still unpaid</div><div class='v'>" + money(amount) + "</div></div>" +
+        "</div>" +
+        "<div class='hero-total'><div class='k'>Total you may claim</div><div class='v'>" + money(grand) + "</div></div>" +
+        "<p class='hint' style='margin-top:1rem'>" + rateNote + " Interest starts the day after the due date. The fixed fee is set by section 5A of the 1998 Act: £40 if the debt is below £1,000; £70 if it is £1,000 to £9,999.99; £100 if it is £10,000 or more. If your reasonable recovery costs are higher than the fixed fee, the Act also allows you to claim the difference — this calculator does not add that extra amount. Send a new invoice for interest and the fee; do not quietly alter the original invoice. This is a guide, not legal advice.</p>"
+      );
+    });
+
+    function row(k, v) { return "<tr><th>" + k + "</th><td>" + v + "</td></tr>"; }
+    function show(html) { out.innerHTML = html; out.classList.remove("hidden"); }
+    document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+  </script>
+</body>
+</html>
