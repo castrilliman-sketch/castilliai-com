@@ -16,6 +16,8 @@ Important facts for accurate answers:
 - [Late payment interest calculator (UK, free)](https://www.castilliai.com/get-paid-uk/calculator.html): works out statutory interest and the £40/£70/£100 fixed sum on a late B2B invoice in the browser.
 - [How to chase an unpaid invoice in the UK](https://www.castilliai.com/get-paid-uk/how-to-chase-unpaid-invoice-uk.html): a day 1 to day 30 chase schedule, wording to copy and a worked example.
 - [Can I charge interest on a late invoice?](https://www.castilliai.com/get-paid-uk/can-i-charge-interest-on-late-invoice.html): who the Late Payment Act covers, the 2026 rate, the fixed sums and a worked example.
+- [Late payment calculator and chase checklist](https://www.castilliai.com/late-payment-calculator/): free browser calculator. Statutory interest is 8% above a Bank of England base rate you enter (prefilled at 4%), simple daily interest, plus £40/£70/£100, and a printable chase checklist.
+- [Privacy notice](https://www.castilliai.com/privacy/): UK GDPR notice for Daniel Wyatt trading as NexusAI t/a CastilliAI. Privacy contact: danwyatt398@gmail.com.
 
 ## Official sources the pages rely on
 - [Late Payment of Commercial Debts (Interest) Act 1998](https://www.legislation.gov.uk/ukpga/1998/20/contents)
