@@ -157,9 +157,17 @@
     iframe.calc {
       width: 100%;
       border: 0;
-      min-height: 1080px;
+      min-height: 1850px;
       background: transparent;
     }
+    @media (max-width: 900px) { iframe.calc { min-height: 1900px; } }
+    @media (max-width: 760px) { iframe.calc { min-height: 1980px; } }
+    @media (max-width: 680px) { iframe.calc { min-height: 2100px; } }
+    @media (max-width: 620px) { iframe.calc { min-height: 2220px; } }
+    @media (max-width: 540px) { iframe.calc { min-height: 2380px; } }
+    @media (max-width: 460px) { iframe.calc { min-height: 2540px; } }
+    @media (max-width: 400px) { iframe.calc { min-height: 2700px; } }
+    @media (max-width: 360px) { iframe.calc { min-height: 2920px; } }
     details {
       background: var(--card);
       border: 1px solid var(--line);
