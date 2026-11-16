@@ -22,61 +22,68 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Get Paid UK", "description": "A one-off digital kit for UK sole traders, freelancers and small suppliers chasing late business-to-business invoices: six chase templates, a statutory interest calculator, an invoice tracker and a plain-English guide.", "brand": {"@type": "Brand", "name": "CastilliAI"}, "url": "https://www.castilliai.com/get-paid-uk/", "offers": {"@type": "Offer", "price": "39.00", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://www.castilliai.com/get-paid-uk/"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who is Get Paid UK for?", "acceptedAnswer": {"@type": "Answer", "text": "UK sole traders, freelancers and small suppliers who invoice other businesses or public authorities and want a clear, calm way to chase late payment themselves. It is not written for consumer debts or for anyone who wants a third party to contact their customers."}}, {"@type": "Question", "name": "Can I add interest to an invoice for a private customer?", "acceptedAnswer": {"@type": "Answer", "text": "Not under the Late Payment of Commercial Debts (Interest) Act 1998. Statutory interest and the £40 / £70 / £100 fixed sums only apply when both you and your customer are acting in the course of a business, including public authorities."}}, {"@type": "Question", "name": "What is the statutory interest rate at the moment?", "acceptedAnswer": {"@type": "Answer", "text": "Reference rate 3.75% (Jul–Dec 2026), statutory rate 11.75%. The current Bank Rate (4% since 5 Nov 2026) applies from 1 Jan 2027 if it is still in force on 31 Dec."}}, {"@type": "Question", "name": "Is the calculator really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It runs in your browser, needs no sign-up and does not send your figures anywhere."}}, {"@type": "Question", "name": "How do I get the kit?", "acceptedAnswer": {"@type": "Answer", "text": "Pay £39 once by card through Stripe checkout and you get an instant download. There is no subscription and no account."}}, {"@type": "Question", "name": "Is this legal advice? Do you contact my customers?", "acceptedAnswer": {"@type": "Answer", "text": "No and no. Get Paid UK is general information and tools for you to use yourself. NexusAI t/a CastilliAI is not a law firm, does not collect debts and never contacts your customers."}}]}</script>
   <style>
-    :root { --ink:#162127; --muted:#4d5c66; --line:#d9d3c7; --paper:#f3efe6; --card:#fffcf6; --accent:#1c5c45; --accent-dark:#134434; --soft:#e6f0eb; }
+    :root { --ink:#162127; --muted:#4d5c66; --line:#d9d3c7; --paper:#f6f3ec; --card:#fffcf6; --accent:#1c5c45; --buy:#0f6a42; --buy-dark:#0b5233; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font:17px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
-    a { color:var(--accent); } a:hover { color:var(--accent-dark); }
+    a { color:var(--accent); } a:hover { color:var(--buy-dark); }
     .wrap { width:min(1040px, calc(100% - 2.5rem)); margin:0 auto; }
-    .site-header { padding:1rem 0; border-bottom:1px solid var(--line); background:var(--paper); }
+    .site-header { padding:0.9rem 0; border-bottom:1px solid var(--line); background:#fff; }
     .site-header .wrap { display:flex; align-items:center; justify-content:space-between; gap:0.8rem 1.5rem; flex-wrap:wrap; }
     .wordmark { font-weight:700; letter-spacing:-0.03em; text-decoration:none; color:var(--ink); font-size:1.1rem; }
     .wordmark span { color:var(--accent); }
     .wordmark small { display:block; font-weight:400; letter-spacing:0; color:var(--muted); font-size:0.75rem; }
     nav { display:flex; gap:0.4rem 1.1rem; flex-wrap:wrap; }
     nav a { color:var(--muted); text-decoration:none; font-size:0.93rem; } nav a:hover { color:var(--ink); }
-    h1, h2 { font-family:Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif; font-weight:600; letter-spacing:-0.03em; }
-    h1 { font-size:clamp(2.1rem, 6vw, 3.4rem); line-height:1.1; margin:0 0 1rem; max-width:15ch; }
-    h2 { font-size:clamp(1.5rem, 3.5vw, 2rem); line-height:1.2; margin:0 0 1rem; }
-    h3 { font-size:1.05rem; margin:0 0 0.35rem; }
-    .hero { padding:3rem 0 2.6rem; }
-    .hero-grid { display:grid; grid-template-columns:1.25fr 1fr; gap:2rem; align-items:center; }
-    .lede { font-size:1.13rem; color:var(--muted); margin:0 0 1.5rem; max-width:36rem; }
-    .actions { display:flex; gap:0.7rem; flex-wrap:wrap; }
-    .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; padding:0.8rem 1.25rem; border-radius:9px; text-align:center; }
-    .btn:hover { background:var(--accent-dark); color:#fff; }
-    .btn.ghost { background:transparent; color:var(--accent-dark); border:1px solid var(--accent); }
-    .btn.ghost:hover { background:var(--soft); }
-    .fine { font-size:0.9rem; color:var(--muted); margin:0.9rem 0 0; }
+    h1, h2 { font-family:Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif; font-weight:600; letter-spacing:-0.03em; color:var(--ink); }
+    h1 { font-size:clamp(1.9rem, 4.6vw, 3.15rem); line-height:1.12; margin:0 0 0.75rem; max-width:16ch; }
+    h2 { font-size:clamp(1.45rem, 3vw, 2rem); line-height:1.2; margin:0 0 0.8rem; }
+    .hero { padding:2.2rem 0 1.4rem; }
+    .hero-grid { display:grid; grid-template-columns:1.2fr 0.9fr; gap:2rem; align-items:start; }
+    .lede { font-size:1.12rem; color:var(--ink); margin:0 0 1.1rem; max-width:38rem; }
+    .actions { display:flex; flex-direction:column; align-items:flex-start; gap:0.65rem; max-width:28rem; }
+    .btn-buy { display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:0.85rem 1.4rem; background:var(--buy); color:#fff; text-decoration:none; font-weight:700; font-size:1.08rem; border-radius:10px; }
+    .btn-buy:hover { background:var(--buy-dark); color:#fff; }
+    .btn-outline { display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:0.8rem 1.2rem; background:transparent; color:var(--ink); text-decoration:none; font-weight:600; border:2px solid var(--ink); border-radius:10px; }
+    .btn-outline:hover { background:#fff; color:var(--ink); }
+    .fine, .refund { font-size:0.9rem; color:var(--muted); margin:0.15rem 0 0; max-width:40rem; }
+    .trust { list-style:none; display:grid; grid-template-columns:repeat(4, 1fr); gap:0.7rem; margin:1.3rem 0 0; padding:0; }
+    .trust li { background:#fff; border:1px solid var(--line); border-radius:10px; padding:0.75rem 0.85rem; font-size:0.92rem; font-weight:600; }
     .example { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.2rem 1.3rem; }
     .example .k { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); }
     .example table { width:100%; border-collapse:collapse; margin:0.6rem 0; font-size:0.95rem; }
     .example td { padding:0.35rem 0; border-bottom:1px solid var(--line); }
     .example td:last-child { text-align:right; font-weight:600; }
-    .example .total td { border-bottom:0; font-size:1.05rem; color:var(--accent-dark); }
-    section { padding:2.6rem 0; border-top:1px solid var(--line); }
+    .example .total td { border-bottom:0; font-size:1.05rem; }
+    section { padding:2.4rem 0; border-top:1px solid var(--line); }
+    .inside { margin:0; padding-left:1.2rem; }
+    .inside li { margin:0.45rem 0; }
+    .buy-block { background:#fff; border:1px solid var(--line); border-radius:14px; padding:1.2rem 1.3rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
     .grid3 { display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; }
     .grid2 { display:grid; grid-template-columns:repeat(2, 1fr); gap:1rem; }
     .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1.1rem 1.2rem; }
     .card p { margin:0; color:var(--muted); font-size:0.98rem; }
-    .step { display:inline-grid; place-items:center; width:2rem; height:2rem; border-radius:50%; background:var(--soft); color:var(--accent-dark); font-weight:700; margin-bottom:0.6rem; }
-    .facts .big { font-family:Georgia, Palatino, serif; font-size:2rem; color:var(--accent-dark); margin:0 0 0.2rem; }
-    .price-box { display:flex; justify-content:space-between; align-items:center; gap:1.5rem; flex-wrap:wrap; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.4rem 1.5rem; }
-    .price { font-family:Georgia, Palatino, serif; font-size:2.8rem; margin:0; letter-spacing:-0.03em; }
-    .price small { font-size:1rem; color:var(--muted); font-family:"Segoe UI", system-ui, sans-serif; letter-spacing:0; }
+    .step { display:inline-grid; place-items:center; width:2rem; height:2rem; border-radius:50%; background:#e7f2ec; color:var(--accent); font-weight:700; margin-bottom:0.6rem; }
+    .facts .big { font-family:Georgia, Palatino, serif; font-size:2rem; margin:0 0 0.2rem; }
     .guides a { display:block; text-decoration:none; color:var(--ink); }
     .guides a:hover h3 { color:var(--accent); }
     details { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:0.75rem 1rem; margin:0 0 0.55rem; }
     summary { cursor:pointer; font-weight:600; }
     details p { margin:0.6rem 0 0.2rem; color:var(--muted); }
-    .site-footer { border-top:1px solid var(--line); padding:1.8rem 0 2.4rem; font-size:0.92rem; color:var(--muted); }
+    .site-footer { border-top:1px solid var(--line); padding:1.8rem 0 2.4rem; font-size:0.92rem; color:var(--muted); background:#fff; }
     .site-footer .cols { display:flex; justify-content:space-between; gap:1rem 2rem; flex-wrap:wrap; }
     .site-footer a { color:var(--ink); text-decoration:none; } .site-footer a:hover { color:var(--accent); }
     .site-footer p { margin:0.25rem 0; }
+    .buy-bar { display:none; }
     @media (max-width: 820px) {
-      .hero-grid, .grid3, .grid2 { grid-template-columns:1fr; }
-      .hero { padding:2rem 0 2rem; }
-      .actions .btn { flex:1 1 100%; }
+      .hero-grid, .grid3, .grid2, .trust { grid-template-columns:1fr; }
+      .hero { padding:1.4rem 0 1rem; }
+    }
+    @media (max-width: 720px) {
+      .actions, .actions .btn-buy, .actions .btn-outline, .buy-block .btn-buy { width:100%; }
+      .buy-bar { display:block; position:fixed; left:0; right:0; bottom:0; z-index:30; background:#fff; border-top:1px solid var(--line); padding:0.6rem 0.8rem calc(0.6rem + env(safe-area-inset-bottom)); }
+      .buy-bar .btn-buy { width:100%; }
+      body { padding-bottom:5.4rem; }
     }
   </style>
 </head>
@@ -85,11 +92,10 @@
     <div class="wrap">
       <a class="wordmark" href="/">Get Paid <span>UK</span><small>NexusAI t/a CastilliAI</small></a>
       <nav aria-label="Site">
-        <a href="/late-payment-calculator/">Late payment calculator</a>
-        <a href="/get-paid-uk/calculator.html">Free calculator</a>
+        <a href="/late-payment-calculator/">Free late-payment calculator</a>
         <a href="/get-paid-uk/how-to-chase-unpaid-invoice-uk.html">How to chase</a>
         <a href="/get-paid-uk/can-i-charge-interest-on-late-invoice.html">Charging interest</a>
-        <a href="#kit">The kit</a>
+        <a href="#inside">What’s inside</a>
         <a href="#faq">FAQ</a>
       </nav>
     </div>
@@ -99,13 +105,14 @@
     <div class="hero wrap">
       <div class="hero-grid">
         <div>
-          <h1>Get paid for work you’ve already done.</h1>
-          <p class="lede">Simple tools for UK sole traders and freelancers chasing late business invoices. See what you can add with the free calculator, then chase calmly with ready-to-edit templates. You send everything yourself — we never contact your customers.</p>
+          <h1>Owed money on an invoice? Get paid without the awkward chase.</h1>
+          <p class="lede">Ready-to-send chase emails and letters, plus an interest calculator, for UK freelancers, contractors and small businesses. £39, instant download.</p>
           <div class="actions">
-            <a class="btn" href="/get-paid-uk/calculator.html">Use the free calculator</a>
-            <a class="btn ghost" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit — £39</a>
+            <a class="btn-buy" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit – £39</a>
+            <a class="btn-outline" href="/late-payment-calculator/">Free late-payment calculator</a>
           </div>
-          <p class="fine">For business-to-business invoices. General information, not legal advice.</p>
+          <p class="fine">For UK business-to-business invoices. Price in GBP.</p>
+          <p class="refund">If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:hello@castilliai.com">hello@castilliai.com</a>.</p>
         </div>
         <aside class="example" aria-label="Worked example">
           <div class="k">Worked example</div>
@@ -115,9 +122,15 @@
             <tr><td>Fixed sum (£1,000–£9,999.99)</td><td>£70.00</td></tr>
             <tr class="total"><td>You may claim on top</td><td>£116.36</td></tr>
           </table>
-          <a href="/get-paid-uk/calculator.html">Work out your own invoice →</a>
+          <a href="/late-payment-calculator/">Work out your own invoice →</a>
         </aside>
       </div>
+      <ul class="trust">
+        <li>Built for UK late-payment law (1998 Act)</li>
+        <li>Instant download</li>
+        <li>We never contact your customers</li>
+        <li>Not legal advice</li>
+      </ul>
     </div>
 
     <section id="how">
@@ -131,22 +144,20 @@
       </div>
     </section>
 
-    <section id="kit">
+    <section id="inside">
       <div class="wrap">
-        <h2>What’s in the £39 kit</h2>
+        <h2>What’s inside</h2>
         <p class="lede">A one-off download you keep. Open the files in a browser or spreadsheet — no account and no subscription.</p>
-        <div class="grid2">
-          <article class="card"><h3>Escalating chase templates</h3><p>Six ready-to-edit emails and letters: a polite reminder before the due date, then day 1, day 7, day 14, a day 30 final notice, and a formal final request written as your own letter — not a solicitor’s letter.</p></article>
-          <article class="card"><h3>Statutory interest calculator</h3><p>Work out interest at 8% above the Bank of England rate, plus the fixed sum of £40, £70 or £100, under the Late Payment of Commercial Debts (Interest) Act 1998. Included as a web page and a spreadsheet.</p></article>
-          <article class="card"><h3>Invoice tracker</h3><p>A spreadsheet to record invoices, due dates, chases and amounts outstanding, including suggested interest and fees on overdue business-to-business invoices.</p></article>
-          <article class="card"><h3>One-page plain-English guide</h3><p>When a payment is late, what you can add, and a calm sequence for chasing it, with links to GOV.UK pages. Clear that this is information, not legal advice.</p></article>
-        </div>
-        <div class="price-box" style="margin-top:1.2rem">
-          <div>
-            <p class="price">£39 <small>paid once · instant download</small></p>
-            <p style="margin:0.3rem 0 0;color:var(--muted)">Secure card checkout by Stripe. <a href="/get-paid-uk/#faq">Refunds and cancellation</a>.</p>
-          </div>
-          <a class="btn" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit — £39</a>
+        <ul class="inside">
+          <li>Six ready-to-edit chase emails and letters: a polite reminder before the due date, then day 1, day 7, day 14, a day 30 final notice, and a formal final request written as your own letter.</li>
+          <li>A statutory interest calculator, as a web page and a spreadsheet. Reference rate 3.75% (Jul–Dec 2026), statutory rate 11.75%, plus a fixed sum of £40, £70 or £100 under the Late Payment of Commercial Debts (Interest) Act 1998.</li>
+          <li>An invoice tracker spreadsheet for due dates, chases and amounts outstanding.</li>
+          <li>A one-page plain-English guide, with links to GOV.UK pages. This is information, not legal advice.</li>
+          <li>You send the chases yourself. NexusAI t/a CastilliAI never contacts your customers.</li>
+        </ul>
+        <div class="buy-block" style="margin-top:1.2rem">
+          <p style="margin:0">£39, paid once. Instant download.</p>
+          <a class="btn-buy" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit – £39</a>
         </div>
       </div>
     </section>
@@ -178,7 +189,7 @@
         <h2>Questions</h2>
         <details>
           <summary>Who is Get Paid UK for?</summary>
-          <p>UK sole traders, freelancers and small suppliers who invoice other businesses or public authorities and want a clear, calm way to chase late payment themselves. It is not written for consumer debts or for anyone who wants a third party to contact their customers.</p>
+          <p>UK freelancers, contractors and small businesses who invoice other businesses or public authorities and want a clear, calm way to chase late payment themselves. It is not written for consumer debts or for anyone who wants a third party to contact their customers.</p>
         </details>
         <details>
           <summary>Can I add interest to an invoice for a private customer?</summary>
@@ -200,9 +211,16 @@
           <summary>Is this legal advice? Do you contact my customers?</summary>
           <p>No and no. Get Paid UK is general information and tools for you to use yourself. NexusAI t/a CastilliAI is not a law firm, does not collect debts and never contacts your customers.</p>
         </details>
+        <div class="buy-block" style="margin-top:1.2rem">
+          <p style="margin:0">For UK business-to-business invoices. Price in GBP.</p>
+          <a class="btn-buy" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit – £39</a>
+        </div>
       </div>
     </section>
   </main>
+  <div class="buy-bar">
+    <a class="btn-buy" href="https://buy.stripe.com/6oU6oI87Ca6Y7xLg5Va3u0i">Get the kit – £39</a>
+  </div>
 
   <footer class="site-footer">
     <div class="wrap">
