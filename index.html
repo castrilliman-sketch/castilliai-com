@@ -18,7 +18,7 @@
   <meta name="twitter:site" content="@nexusai11">
   <meta name="twitter:title" content="Get Paid UK — get paid for work you’ve already done">
   <meta name="twitter:description" content="Free UK late payment interest calculator and a £39 kit for sole traders and freelancers chasing late B2B invoices: chase templates, a tracker and a plain-English guide.">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NexusAI t/a CastilliAI", "alternateName": "CastilliAI", "url": "https://www.castilliai.com/", "email": "hello@castilliai.com", "sameAs": ["https://x.com/nexusai11", "https://www.tiktok.com/@castilliai7"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NexusAI t/a CastilliAI", "alternateName": "CastilliAI", "url": "https://www.castilliai.com/", "email": "danwyatt398@gmail.com", "sameAs": ["https://x.com/nexusai11", "https://www.tiktok.com/@castilliai7"]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Get Paid UK", "description": "A one-off digital kit for UK sole traders, freelancers and small suppliers chasing late business-to-business invoices: six chase templates, a statutory interest calculator, an invoice tracker and a plain-English guide.", "brand": {"@type": "Brand", "name": "CastilliAI"}, "url": "https://www.castilliai.com/get-paid-uk/", "offers": {"@type": "Offer", "price": "39.00", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://www.castilliai.com/get-paid-uk/"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who is Get Paid UK for?", "acceptedAnswer": {"@type": "Answer", "text": "UK sole traders, freelancers and small suppliers who invoice other businesses or public authorities and want a clear, calm way to chase late payment themselves. It is not written for consumer debts or for anyone who wants a third party to contact their customers."}}, {"@type": "Question", "name": "Can I add interest to an invoice for a private customer?", "acceptedAnswer": {"@type": "Answer", "text": "Not under the Late Payment of Commercial Debts (Interest) Act 1998. Statutory interest and the £40 / £70 / £100 fixed sums only apply when both you and your customer are acting in the course of a business, including public authorities."}}, {"@type": "Question", "name": "What is the statutory interest rate at the moment?", "acceptedAnswer": {"@type": "Answer", "text": "Reference rate 3.75% (Jul–Dec 2026), statutory rate 11.75%. The current Bank Rate (4% since 5 Nov 2026) applies from 1 Jan 2027 if it is still in force on 31 Dec."}}, {"@type": "Question", "name": "Is the calculator really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It runs in your browser, needs no sign-up and does not send your figures anywhere."}}, {"@type": "Question", "name": "How do I get the kit?", "acceptedAnswer": {"@type": "Answer", "text": "Pay £39 once by card through Stripe checkout and you get an instant download. There is no subscription and no account."}}, {"@type": "Question", "name": "Is this legal advice? Do you contact my customers?", "acceptedAnswer": {"@type": "Answer", "text": "No and no. Get Paid UK is general information and tools for you to use yourself. NexusAI t/a CastilliAI is not a law firm, does not collect debts and never contacts your customers."}}]}</script>
   <style>
@@ -41,8 +41,9 @@
     .hero { padding:2.2rem 0 1.4rem; }
     .hero-grid { display:grid; grid-template-columns:1.2fr 0.9fr; gap:2rem; align-items:start; }
     .lede { font-size:1.12rem; color:var(--ink); margin:0 0 1.1rem; max-width:38rem; }
-    .actions { display:flex; flex-direction:column; align-items:flex-start; gap:0.65rem; max-width:28rem; }
+    .actions { display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; gap:0.75rem; }
     .btn-buy { display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:0.85rem 1.4rem; background:var(--buy); color:#fff; text-decoration:none; font-weight:700; font-size:1.08rem; border-radius:10px; }
+    .actions .btn-buy { min-height:60px; min-width:260px; padding:1.05rem 1.8rem; font-size:1.3rem; }
     .btn-buy:hover { background:var(--buy-dark); color:#fff; }
     .btn-outline { display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:0.8rem 1.2rem; background:transparent; color:var(--ink); text-decoration:none; font-weight:600; border:2px solid var(--ink); border-radius:10px; }
     .btn-outline:hover { background:#fff; color:var(--ink); }
@@ -80,7 +81,8 @@
       .hero { padding:1.4rem 0 1rem; }
     }
     @media (max-width: 720px) {
-      .actions, .actions .btn-buy, .actions .btn-outline, .buy-block .btn-buy { width:100%; }
+      .actions { flex-direction:column; align-items:stretch; }
+      .actions .btn-buy, .actions .btn-outline, .buy-block .btn-buy { width:100%; }
       .buy-bar { display:block; position:fixed; left:0; right:0; bottom:0; z-index:30; background:#fff; border-top:1px solid var(--line); padding:0.6rem 0.8rem calc(0.6rem + env(safe-area-inset-bottom)); }
       .buy-bar .btn-buy { width:100%; }
       body { padding-bottom:5.4rem; }
@@ -112,7 +114,7 @@
             <a class="btn-outline" href="/late-payment-calculator/">Free late-payment calculator</a>
           </div>
           <p class="fine">For UK business-to-business invoices. Price in GBP.</p>
-          <p class="refund">If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:hello@castilliai.com">hello@castilliai.com</a>.</p>
+          <p class="fine">Instant download. 14-day refund if you haven’t downloaded it, or a full refund if it’s faulty. <a href="#refunds">Full terms</a> below.</p>
         </div>
         <aside class="example" aria-label="Worked example">
           <div class="k">Worked example</div>
@@ -184,6 +186,13 @@
       </div>
     </section>
 
+    <section id="refunds">
+      <div class="wrap">
+        <h2>Refunds</h2>
+        <p>If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:danwyatt398@gmail.com">danwyatt398@gmail.com</a>.</p>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="wrap">
         <h2>Questions</h2>
@@ -227,7 +236,7 @@
       <div class="cols">
         <div>
           <p><strong>Get Paid UK</strong> · NexusAI t/a CastilliAI</p>
-          <p><a href="mailto:hello@castilliai.com">hello@castilliai.com</a> · ICO registration: ZC278584</p>
+          <p><a href="mailto:danwyatt398@gmail.com">danwyatt398@gmail.com</a> · ICO registration: ZC278584</p>
         </div>
         <div>
           <p><a href="https://x.com/nexusai11">X @nexusai11</a> · <a href="https://www.tiktok.com/@castilliai7">TikTok @castilliai7</a></p>

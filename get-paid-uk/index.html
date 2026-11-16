@@ -70,7 +70,7 @@
       max-width: 16ch;
     }
     .lede { font-size: 1.12rem; color: var(--ink); max-width: 40rem; margin: 0 0 1.1rem; }
-    .actions { display: flex; flex-direction: column; align-items: flex-start; gap: 0.65rem; max-width: 28rem; }
+    .actions { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
     .fine, .refund { font-size: 0.9rem; color: var(--muted); margin: 0.15rem 0 0; max-width: 40rem; }
     .trust { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; margin: 1.3rem 0 0; padding: 0; }
     .trust li { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 0.75rem 0.85rem; font-size: 0.92rem; font-weight: 600; }
@@ -92,6 +92,7 @@
       border-radius: 10px;
     }
     .btn-buy:hover { background: var(--buy-dark); color: #fff; }
+    .actions .btn-buy { min-height: 60px; min-width: 260px; padding: 1.05rem 1.8rem; font-size: 1.3rem; }
     .btn-outline {
       display: inline-flex;
       align-items: center;
@@ -123,7 +124,8 @@
     @media (max-width: 820px) { .trust { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 700px) {
       .grid, .trust { grid-template-columns: 1fr; }
-      .actions, .actions .btn-buy, .actions .btn-outline, .buy-block .btn-buy { width: 100%; }
+      .actions { flex-direction: column; align-items: stretch; }
+      .actions .btn-buy, .actions .btn-outline, .buy-block .btn-buy { width: 100%; }
       .hero { padding: 1.4rem 0 1rem; }
       .buy-bar { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: #fff; border-top: 1px solid var(--line); padding: 0.6rem 0.8rem calc(0.6rem + env(safe-area-inset-bottom)); }
       .buy-bar .btn-buy { width: 100%; }
@@ -206,7 +208,7 @@
         <a class="btn-outline" href="/late-payment-calculator/">Free late-payment calculator</a>
       </div>
       <p class="fine">For UK business-to-business invoices. Price in GBP.</p>
-      <p class="refund">If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:hello@castilliai.com">hello@castilliai.com</a>.</p>
+      <p class="fine">Instant download. 14-day refund if you haven’t downloaded it, or a full refund if it’s faulty. <a href="#refunds">Full terms</a> below.</p>
       <ul class="trust">
         <li>Built for UK late-payment law (1998 Act)</li>
         <li>Instant download</li>
@@ -257,6 +259,13 @@
       </div>
     </section>
 
+    <section id="refunds">
+      <div class="wrap">
+        <h2>Refunds</h2>
+        <p>If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:danwyatt398@gmail.com">danwyatt398@gmail.com</a>.</p>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="wrap">
         <h2>Questions</h2>
@@ -283,7 +292,7 @@
 
         <details>
           <summary>Can I cancel or get a refund?</summary>
-          <p>If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:hello@castilliai.com">hello@castilliai.com</a>.</p>
+          <p>If you buy as a consumer, the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 normally give you 14 days to cancel. Because this is digital content delivered immediately, that cancellation right is lost once the download starts, provided you gave your express consent and acknowledged that you would lose the right. Checkout asks for that acknowledgement before you pay. If you have not yet downloaded the kit, you can still cancel within 14 days and we will refund you in full. If the kit is faulty or not as described, you are entitled to a refund. Write to <a href="mailto:danwyatt398@gmail.com">danwyatt398@gmail.com</a>.</p>
         </details>
 
         <details>
@@ -307,7 +316,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <div>NexusAI t/a CastilliAI · <a href="mailto:hello@castilliai.com">hello@castilliai.com</a> · <a href="/privacy/">Privacy</a></div>
+      <div>NexusAI t/a CastilliAI · <a href="mailto:danwyatt398@gmail.com">danwyatt398@gmail.com</a> · <a href="/privacy/">Privacy</a></div>
       <div>
         <a href="/late-payment-calculator/">Late payment calculator</a>
         ·
