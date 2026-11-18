@@ -5,8 +5,22 @@
     <link>https://www.castilliai.com/posts/</link>
     <description>Short, practical notes on getting paid and chasing late invoices, for UK sole traders and freelancers. This is general information, not legal advice.</description>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 17 Nov 2026 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 06:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.castilliai.com/posts/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>How to calculate late payment interest on an invoice</title>
+      <link>https://www.castilliai.com/posts/2026-11-18-how-to-calculate-late-payment-interest.html</link>
+      <guid isPermaLink="true">https://www.castilliai.com/posts/2026-11-18-how-to-calculate-late-payment-interest.html</guid>
+      <pubDate>Wed, 18 Nov 2026 06:00:00 +0000</pubDate>
+      <description><![CDATA[
+<p>If a business customer pays your invoice late, GOV.UK sets out a simple way to work out statutory interest.</p>
+      <p>Multiply the amount owed by the annual rate, then divide by 365 to get the daily interest. Multiply that by the number of days the payment is late. For interest that starts to run between 1 July and 31 December 2026, the rate is 8% plus the 3.75% reference rate: 11.75% a year.</p>
+      <p>For example, on a £1,000 invoice the daily interest is about 32p, so 30 days late adds about £9.66.</p>
+      <p>This is for business-to-business invoices only. It is general information, not legal advice.</p>
+      <p>Get the figure for your own invoice with the <a href="https://www.castilliai.com/late-payment-calculator/">free late payment calculator</a>, or see the <a href="https://www.castilliai.com/get-paid-uk/">Get Paid UK kit</a> for chase templates and a tracker.</p>
+      <p class="signoff">Daniel<br>NexusAI t/a CastilliAI</p>
+]]></description>
+    </item>
     <item>
       <title>Late payment compensation: the £40, £70 or £100 fixed sum</title>
       <link>https://www.castilliai.com/posts/2026-11-17-late-payment-compensation-40-70-100.html</link>
