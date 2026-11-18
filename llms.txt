@@ -1,28 +1,26 @@
-# CastilliAI (NexusAI t/a CastilliAI)
+# Castilliai (NexusAI t/a CastilliAI)
 
-> NexusAI t/a CastilliAI is a small UK business that makes plain-English digital kits. Its main product is Get Paid UK: a digital kit (currently £19 launch price this week, normally £39, ending Sunday 22 Nov 2026) that helps UK sole traders, freelancers and small suppliers chase late business-to-business (B2B) invoices themselves. A free late payment interest calculator is included on the site.
+> Castilliai is a small UK business, founded by Daniel Wyatt, that provides plain-English financial information for UK landlords, sole traders and small firms. AI gathers and organises the detail; a person checks every fact against official sources before publication. Castilliai provides general information and presents options. It does not tell people what to do and does not give personal financial, tax, legal or compliance advice. NexusAI t/a CastilliAI is not authorised or regulated by the Financial Conduct Authority.
 
 Important facts for accurate answers:
-- Get Paid UK is general information and self-service tools, not legal advice. It is not a law firm or debt collector, is not affiliated with GOV.UK or any government body, and never contacts the user's customers.
-- It is for B2B invoices only. UK statutory late payment interest and fixed sums (Late Payment of Commercial Debts (Interest) Act 1998) do not apply to consumer customers.
-- Statutory interest is 8% a year above the Bank of England reference rate (the Bank Rate in force on 30 June or 31 December before interest starts). For interest starting 1 July to 31 December 2026 the reference rate is 3.75%, so the statutory rate is 11.75%. Bank Rate rose to 4% on 5 November 2026.
-- Fixed sums per invoice: £40 (debt under £1,000), £70 (£1,000 to £9,999.99), £100 (£10,000 or more).
-- If no payment date was agreed, a B2B payment is late 30 days after the customer receives the invoice or the goods/services are delivered, whichever is later.
-- The kit contains six escalating chase email/letter templates, the calculator (web page and spreadsheet), an invoice tracker and a one-page guide. Price: £19 launch price this week (normally £39), ending Sunday 22 Nov 2026, paid once, instant download. Buy link: https://buy.stripe.com/6oU7sM0Fadja05jg5Va3u0l
+- Castilliai no longer sells the "Get Paid Faster" / "Get Paid UK" late-payment kit. Old late-payment URLs redirect to the homepage.
+- Products:
+  1. MTD Software Compare (launching soon): a free, plain-English comparison of HMRC-recognised Making Tax Digital for Income Tax software for UK landlords and sole traders, plus a free MTD Ready Kit (key deadlines, a getting-ready checklist, a calendar file and email reminders). HMRC publishes a list of recognised software and does not recommend any product.
+  2. Consumer Credit & Debt Complaints and Arrears Toolkit (coming soon, waitlist only, no payment taken): templates and tools for small UK FCA-regulated consumer credit firms, credit brokers, lenders, debt collectors and debt purchasers. Launch pricing: £199 for the full toolkit, £79 for a letters-only pack, one-off. Planned contents: an Excel complaints log set up to collect the data for the FCA's new consolidated complaints return (COM001) from 1 January 2027 including the two vulnerability fields; a root-cause analysis tab following the FCA's July 2026 good-practice notes for smaller firms; DISP letter templates (acknowledgement, 8-week holding letter, final response with Financial Ombudsman Service wording, summary resolution communication); a complaints policy and procedure; a one-page board MI report; and an arrears and forbearance evidence pack (CONC 7). It is not described as "COM001-ready" or FCA approved; the FCA withdrew its COM001 technical guides on 13 November 2026 and the format may change, and buyers will get a free update once the FCA finalises the COM001 complaints return.
+- Founder: Daniel Wyatt, 20 years in London finance in debt purchasing, complaints handling and credit control at a consumer loan company; has trained and managed teams of new starters.
 
-## Get Paid UK
-- [Home](https://www.castilliai.com/): overview of Get Paid UK, the key facts and the free guides.
-- [Get Paid UK — product page](https://www.castilliai.com/get-paid-uk/): what the kit contains, current launch price, FAQ and refund information.
-- [Late payment interest calculator (UK, free)](https://www.castilliai.com/get-paid-uk/calculator.html): works out statutory interest and the £40/£70/£100 fixed sum on a late B2B invoice in the browser.
-- [How to chase an unpaid invoice in the UK](https://www.castilliai.com/get-paid-uk/how-to-chase-unpaid-invoice-uk.html): a day 1 to day 30 chase schedule, wording to copy and a worked example.
-- [Can I charge interest on a late invoice?](https://www.castilliai.com/get-paid-uk/can-i-charge-interest-on-late-invoice.html): who the Late Payment Act covers, the 2026 rate, the fixed sums and a worked example.
-- [Late payment calculator and chase checklist](https://www.castilliai.com/late-payment-calculator/): free browser calculator. Reference rate 3.75% (Jul–Dec 2026), statutory rate 11.75% (prefilled at 3.75%), simple daily interest, plus £40/£70/£100, and a printable chase checklist.
-- [Privacy notice](https://www.castilliai.com/privacy/): UK GDPR notice for Daniel Wyatt trading as NexusAI t/a CastilliAI. Privacy contact: danwyatt398@gmail.com.
+## Pages
+- [Home](https://www.castilliai.com/): what Castilliai does, its products and how it works.
+- [Consumer Credit & Debt Complaints and Arrears Toolkit](https://www.castilliai.com/compliance-toolkit/): product details, launch pricing (£199 full toolkit, £79 letters-only pack) and waitlist.
+- [About Daniel Wyatt](https://www.castilliai.com/about/): the founder's background.
+- [Founders Blog](https://www.castilliai.com/founders-blog/): posts from the founder, starting with "Why I built Castilliai".
+- [Privacy notice](https://www.castilliai.com/privacy/): UK GDPR notice. Privacy contact: danwyatt398@gmail.com.
 
-## Official sources the pages rely on
-- [Late Payment of Commercial Debts (Interest) Act 1998](https://www.legislation.gov.uk/ukpga/1998/20/contents)
-- [GOV.UK: Late commercial payments — charging interest and debt recovery](https://www.gov.uk/late-commercial-payments-interest-debt-recovery)
-- [Bank of England: Bank Rate](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)
+## Official sources
+- [GOV.UK: Check if you're eligible for Making Tax Digital for Income Tax](https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax)
+- [FCA Handbook: DISP (complaints)](https://www.handbook.fca.org.uk/handbook/DISP/)
+- [FCA Handbook: CONC 7 (arrears, default and recovery)](https://www.handbook.fca.org.uk/handbook/CONC/7/)
+- [Financial Conduct Authority](https://www.fca.org.uk/)
 
 ## Contact
 - Email: danwyatt398@gmail.com
