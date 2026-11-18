@@ -92,11 +92,18 @@ section:not(.alt) .monogram{background:var(--alt)}
 .post-list p{color:var(--muted);margin:8px 0 0}
 /* toolkit */
 .price{font-size:48px;font-weight:700;letter-spacing:-0.03em;margin:6px 0 2px;line-height:1.1}
-.price small{font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0}
+.price small{font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;display:inline;margin-left:6px}
+.from-price{font-size:21px;font-weight:600;letter-spacing:-0.02em;color:var(--ink);margin:2px 0 14px}
+.price-card{padding:48px 36px}
+.price-card .price{margin:8px 0 6px}
+.price-card .btn{align-self:flex-start;margin-top:auto}
+.price-card.featured{box-shadow:0 0 0 1px var(--ink)}
+#toolkit h3{font-size:clamp(26px,2.8vw,32px)}
 .checks{list-style:none;padding:0;margin:18px 0 26px;flex:1}
 .checks li{padding:10px 0 10px 28px;border-top:1px solid #e8e8ed;position:relative;font-size:16px;color:var(--ink)}
 .checks li::before{content:"\2713";position:absolute;left:2px;color:var(--ink);font-weight:600}
 .checks li.all{font-weight:600}
+@media (max-width:760px){.price-card{padding:32px 26px}.price-card .btn{width:100%;justify-content:center}}
 /* faq */
 details{border-top:1px solid var(--line);padding:22px 0}
 details:last-of-type{border-bottom:1px solid var(--line)}

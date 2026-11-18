@@ -58,7 +58,7 @@ window.CASTILLIAI_CONFIG = {
       }
       var lines = []; data.forEach(function (v, k) { lines.push(k.replace('_', ' ') + ': ' + v); });
       window.location.href = 'mailto:' + C.CONTACT_EMAIL + '?subject=' + encodeURIComponent('Compliance toolkit waitlist: ' + data.get('firm')) +
-        '&body=' + encodeURIComponent('Please add me to the Complaints and Arrears Toolkit waitlist.\n\n' + lines.join('\n'));
+        '&body=' + encodeURIComponent('Please add me to the Consumer Credit & Debt Complaints and Arrears Toolkit waitlist.\n\n' + lines.join('\n'));
       say('Your email app should open with your details filled in. Press send to join the waitlist. If nothing opens, email ' + C.CONTACT_EMAIL + '.');
     });
   });
