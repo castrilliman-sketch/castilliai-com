@@ -84,6 +84,10 @@
     .buy-block { background:#fff; border:1px solid var(--line); border-radius:14px; padding:1.1rem 1.3rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:1.3rem; }
     .buy-block p { margin:0; font-weight:600; }
     .buy-bar { display:none; }
+    .fca-card { display:flex; justify-content:space-between; align-items:center; gap:1.2rem; flex-wrap:wrap; }
+    .fca-card > div { flex:1 1 30rem; }
+    .fca-card h3 { font-family:Georgia, Palatino, serif; font-size:1.3rem; font-weight:600; }
+    .fca-card .btn-outline { flex:none; }
     .site-footer { border-top:1px solid var(--line); padding:1.4rem 0 2rem; font-size:0.92rem; color:var(--muted); }
     .site-footer a { color:var(--ink); text-decoration:none; }
     @media (max-width:820px) { .pain, .ticks { grid-template-columns:1fr; } }
@@ -94,6 +98,7 @@
       .actions { flex-direction:column; align-items:stretch; }
       .actions .btn-buy, .actions .btn-outline, .buy-block .btn-buy { width:100%; min-width:0; }
       nav a.hide-sm { display:none; }
+      .fca-card .btn-outline { width:100%; }
       .buy-bar { display:flex; gap:0.5rem; position:fixed; left:0; right:0; bottom:0; z-index:30; background:#fff; border-top:1px solid var(--line); padding:0.55rem 0.7rem calc(0.55rem + env(safe-area-inset-bottom)); }
       .buy-bar .btn-buy { flex:1; min-height:50px; font-size:1rem; padding:0.6rem 0.5rem; }
       .buy-bar .btn-buy.alt { background:#fff; color:var(--buy); border:2px solid var(--buy); box-shadow:none; }
@@ -110,6 +115,7 @@
         <a href="#calculator">Free calculator</a>
         <a class="hide-sm" href="#inside">What’s inside</a>
         <a class="hide-sm" href="#faq">FAQ</a>
+        <a href="/compliance-toolkit/">For FCA firms</a>
       </nav>
     </div>
   </header>
@@ -201,6 +207,19 @@
       </div>
     </section>
 
+    <section id="fca-firms" aria-label="For FCA-regulated firms">
+      <div class="wrap">
+        <div class="card fca-card">
+          <div>
+            <p class="eyebrow" style="margin-bottom:0.3rem">For FCA-regulated firms · Coming soon</p>
+            <h3>Consumer Credit &amp; Debt Complaints and Arrears Toolkit</h3>
+            <p>Run a small consumer credit firm, broker, lender or debt firm? Collect the right complaints data from day one for the FCA’s new complaints return (from 1 January 2027), with DISP letter templates, board MI and a CONC 7 arrears and forbearance evidence pack. Templates and tools, not advice.</p>
+          </div>
+          <a class="btn-outline" href="/compliance-toolkit/">Join the free waitlist →</a>
+        </div>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="wrap">
         <h2>Questions</h2>
@@ -251,7 +270,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>NexusAI t/a CastilliAI · <a href="mailto:danwyatt398@gmail.com">danwyatt398@gmail.com</a> · <a href="/privacy/">Privacy</a></div>
-      <div><a href="/late-payment-calculator/">Late payment calculator</a> · <a href="/posts/">Posts</a> · <a href="https://x.com/nexusai11">X @nexusai11</a> · <a href="https://www.tiktok.com/@castilliai7">TikTok @castilliai7</a></div>
+      <div><a href="/late-payment-calculator/">Late payment calculator</a> · <a href="/posts/">Posts</a> · <a href="/compliance-toolkit/">For FCA-regulated firms</a> · <a href="https://x.com/nexusai11">X @nexusai11</a> · <a href="https://www.tiktok.com/@castilliai7">TikTok @castilliai7</a></div>
     </div>
   </footer>
 </body>

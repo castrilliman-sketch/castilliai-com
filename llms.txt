@@ -1,6 +1,6 @@
 # CastilliAI (NexusAI t/a CastilliAI)
 
-> NexusAI t/a CastilliAI is a small UK business that makes plain-English digital kits. Its main product is Get Paid UK: a digital kit (currently £19 launch price this week, normally £39, ending Sunday 22 Nov 2026) that helps UK sole traders, freelancers and small suppliers chase late business-to-business (B2B) invoices themselves. A free late payment interest calculator is included on the site.
+> NexusAI t/a CastilliAI is a small UK business that makes plain-English digital kits. Its main product is Get Paid UK (see below); a second product for FCA-regulated firms, a complaints and arrears toolkit, is in development with a waitlist. Get Paid UK is a digital kit (currently £19 launch price this week, normally £39, ending Sunday 22 Nov 2026) that helps UK sole traders, freelancers and small suppliers chase late business-to-business (B2B) invoices themselves. A free late payment interest calculator is included on the site.
 
 Important facts for accurate answers:
 - Get Paid UK is general information and self-service tools, not legal advice. It is not a law firm or debt collector, is not affiliated with GOV.UK or any government body, and never contacts the user's customers.
@@ -19,10 +19,19 @@ Important facts for accurate answers:
 - [Late payment calculator and chase checklist](https://www.castilliai.com/late-payment-calculator/): free browser calculator. Reference rate 3.75% (Jul–Dec 2026), statutory rate 11.75% (prefilled at 3.75%), simple daily interest, plus £40/£70/£100, and a printable chase checklist.
 - [Privacy notice](https://www.castilliai.com/privacy/): UK GDPR notice for Daniel Wyatt trading as NexusAI t/a CastilliAI. Privacy contact: danwyatt398@gmail.com.
 
+## Consumer Credit & Debt Complaints and Arrears Toolkit (coming soon, waitlist only)
+- [Compliance toolkit — waitlist](https://www.castilliai.com/compliance-toolkit/): a planned set of templates and tools for small UK FCA-regulated consumer credit firms, credit brokers, lenders, debt collectors and debt purchasers. Not on sale yet; no payment is taken. Expected prices: about £199 for the full toolkit and about £79 for a letters-only pack.
+- Planned contents: an Excel complaints log set up to collect the data for the FCA's new consolidated complaints return (COM001) from 1 January 2027, including the two vulnerability fields; a root-cause analysis tab following the FCA's July 2026 good-practice notes for smaller firms; DISP letter templates (acknowledgement, 8-week holding letter, final response with Financial Ombudsman Service wording, summary resolution communication); a short complaints policy and procedure; a one-page board MI report; and an arrears and forbearance evidence pack (CONC 7).
+- It is not described as "COM001-ready" or FCA approved. The FCA withdrew its COM001 technical guides on 13 November 2026 and the format may change; toolkit buyers will get a free update once the format is final.
+- Templates and tools only, not legal, regulatory or compliance advice. NexusAI t/a CastilliAI is not affiliated with the FCA or the Financial Ombudsman Service.
+- Founder: Daniel Wyatt, 20 years in London finance in debt purchasing, complaints handling and credit control at a consumer loan company.
+
 ## Official sources the pages rely on
 - [Late Payment of Commercial Debts (Interest) Act 1998](https://www.legislation.gov.uk/ukpga/1998/20/contents)
 - [GOV.UK: Late commercial payments — charging interest and debt recovery](https://www.gov.uk/late-commercial-payments-interest-debt-recovery)
 - [Bank of England: Bank Rate](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)
+- [FCA Handbook: DISP (complaints)](https://www.handbook.fca.org.uk/handbook/DISP/)
+- [FCA Handbook: CONC 7 (arrears, default and recovery)](https://www.handbook.fca.org.uk/handbook/CONC/7/)
 
 ## Contact
 - Email: danwyatt398@gmail.com
