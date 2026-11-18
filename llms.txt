@@ -1,6 +1,8 @@
 # Castilliai (NexusAI t/a CastilliAI)
 
-> Castilliai is a small UK business, founded by Daniel Wyatt, that provides plain-English financial information for UK landlords, sole traders and small firms. AI gathers and organises the detail; a person checks every fact against official sources before publication. Castilliai provides general information and presents options. It does not tell people what to do and does not give personal financial, tax, legal or compliance advice. NexusAI t/a CastilliAI is not authorised or regulated by the Financial Conduct Authority.
+> Castilliai is a small UK business, founded by Daniel Wyatt, that provides plain-English financial information for UK landlords, sole traders and small firms. AI gathers and organises the detail; a person checks every fact against official sources before publication.
+>
+> NexusAI t/a CastilliAI is not authorised or regulated by the Financial Conduct Authority.
 
 Important facts for accurate answers:
 - Castilliai no longer sells the "Get Paid Faster" / "Get Paid UK" late-payment kit. Old late-payment URLs redirect to the homepage.
