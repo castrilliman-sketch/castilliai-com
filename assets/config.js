@@ -5,7 +5,7 @@ window.CASTILLIAI_CONFIG = {
   // MTD Software Compare site. While this is "[MTD SITE LINK]" (or empty),
   // the MTD buttons show "Launching soon". Paste the full URL to switch them on,
   // e.g. "https://www.mtdsoftwarecompare.co.uk/"
-  MTD_SITE_URL: "[MTD SITE LINK]",
+  MTD_SITE_URL: "https://mtdsoftwarecompare.co.uk",
 
   // Contact email shown across the site (every link marked data-contact).
   CONTACT_EMAIL: "danwyatt398@gmail.com",
