@@ -10,11 +10,18 @@ window.CASTILLIAI_CONFIG = {
   // Contact email shown across the site (every link marked data-contact).
   CONTACT_EMAIL: "danwyatt398@gmail.com",
 
-  // Compliance toolkit waitlist. Leave empty to use the email fallback (opens the
-  // visitor's email app with their answers filled in, addressed to CONTACT_EMAIL).
-  // To collect submissions automatically, paste a form endpoint that accepts a
-  // POST of form fields and returns 2xx (Formspree, Basin, Brevo, a Worker...).
-  WAITLIST_ENDPOINT: ""
+  // Compliance toolkit waitlist form. PLACEHOLDER: paste a form endpoint that
+  // accepts a POST of form fields and returns 2xx, e.g. a Formspree form URL
+  // like "https://formspree.io/f/xxxxxxx". While this is empty the form does not
+  // send anything: it checks the answers and asks the visitor to use the
+  // "Prefer email?" link instead. (It never opens a mailto.)
+  WAITLIST_ENDPOINT: "",
+
+  // Compliance toolkit "Buy" buttons. PLACEHOLDERS: paste each Stripe Payment
+  // Link here when it exists (e.g. "https://buy.stripe.com/..."). While a value
+  // is empty, its Buy button goes to the waitlist section (#waitlist).
+  BUY_URL_FULL_TOOLKIT: "",   // Full toolkit: £120 early bird to 31 Jan 2027, then £199
+  BUY_URL_LETTERS_PACK: ""    // Letters-only pack: £85
 };
 
 (function () {
@@ -36,6 +43,13 @@ window.CASTILLIAI_CONFIG = {
       if (live) { a.href = C.MTD_SITE_URL; a.classList.remove('disabled'); a.removeAttribute('aria-disabled'); a.textContent = a.getAttribute('data-live-text') || 'Visit MTD Software Compare'; }
     });
     document.querySelectorAll('[data-mtd-status]').forEach(function (el) { if (live) el.textContent = 'Live now'; });
+    // Toolkit Buy buttons (data-buy="full" | "letters")
+    var buyUrls = { full: C.BUY_URL_FULL_TOOLKIT, letters: C.BUY_URL_LETTERS_PACK }, anyLive = false;
+    document.querySelectorAll('[data-buy]').forEach(function (a) {
+      var u = buyUrls[a.getAttribute('data-buy')];
+      if (u && /^https:\/\//.test(u)) { anyLive = true; a.href = u; a.rel = 'noopener'; if (a.getAttribute('data-live-text')) a.textContent = a.getAttribute('data-live-text'); }
+    });
+    if (anyLive) document.querySelectorAll('[data-buy-pending]').forEach(function (el) { el.hidden = true; });
     // Waitlist form
     var form = document.getElementById('waitlist-form');
     if (!form) return;
@@ -56,10 +70,8 @@ window.CASTILLIAI_CONFIG = {
           .catch(function () { say('Sorry, that didn’t go through. Please email ' + C.CONTACT_EMAIL + ' instead.', true); });
         return;
       }
-      var lines = []; data.forEach(function (v, k) { lines.push(k.replace('_', ' ') + ': ' + v); });
-      window.location.href = 'mailto:' + C.CONTACT_EMAIL + '?subject=' + encodeURIComponent('Compliance toolkit waitlist: ' + data.get('firm')) +
-        '&body=' + encodeURIComponent('Please add me to the Consumer Credit & Debt Complaints and Arrears Toolkit waitlist.\n\n' + lines.join('\n'));
-      say('Your email app should open with your details filled in. Press send to join the waitlist. If nothing opens, email ' + C.CONTACT_EMAIL + '.');
+      // No endpoint set yet: don't send anything (and never open a mailto).
+      say('Online sign-up isn’t switched on yet, so your details haven’t been sent. Please use the “Prefer email?” link below to join the waitlist.', true);
     });
   });
 })();
