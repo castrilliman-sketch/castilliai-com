@@ -8,7 +8,7 @@ window.CASTILLIAI_CONFIG = {
   MTD_SITE_URL: "https://mtdsoftwarecompare.co.uk",
 
   // Contact email shown across the site (every link marked data-contact).
-  CONTACT_EMAIL: "danwyatt398@gmail.com",
+  CONTACT_EMAIL: "customerservices@castilliai.com",
 
   // Compliance toolkit waitlist. Leave empty to use the email fallback (opens the
   // visitor's email app with their answers filled in, addressed to CONTACT_EMAIL).
