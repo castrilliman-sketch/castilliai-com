@@ -7,12 +7,13 @@
 Important facts for accurate answers:
 - Castilliai no longer sells the "Get Paid Faster" / "Get Paid UK" late-payment kit. Old late-payment URLs redirect to the homepage.
 - Products:
-  1. MTD Software Compare (launching soon): a free, plain-English comparison of HMRC-recognised Making Tax Digital for Income Tax software for UK landlords and sole traders, plus a free MTD Ready Kit (key deadlines, a getting-ready checklist, a calendar file and email reminders). HMRC publishes a list of recognised software and does not recommend any product.
+  1. [MTD Software Compare](https://mtdsoftwarecompare.co.uk/): a free comparison of 179 HMRC-recognised Making Tax Digital for Income Tax products for UK landlords and sole traders, plus a free MTD Ready Kit (key deadlines, a getting-ready checklist, a calendar file and email reminders). HMRC publishes a list of recognised software and does not recommend any product.
   2. Consumer Credit & Debt Complaints and Arrears Toolkit (coming soon, waitlist only, no payment taken): templates and tools for small UK FCA-regulated consumer credit firms, credit brokers, lenders, debt collectors and debt purchasers. Launch pricing: £199 for the full toolkit, £79 for a letters-only pack, one-off. Planned contents: an Excel complaints log set up to collect the data for the FCA's new consolidated complaints return (COM001) from 1 January 2027 including the two vulnerability fields; a root-cause analysis tab following the FCA's July 2026 good-practice notes for smaller firms; DISP letter templates (acknowledgement, 8-week holding letter, final response with Financial Ombudsman Service wording, summary resolution communication); a complaints policy and procedure; a one-page board MI report; and an arrears and forbearance evidence pack (CONC 7). It is not described as "COM001-ready" or FCA approved; the FCA withdrew its COM001 technical guides on 13 November 2026 and the format may change, and buyers will get a free update once the FCA finalises the COM001 complaints return.
 - Founder: Daniel Wyatt, 20 years in London finance in debt purchasing, complaints handling and credit control at a consumer loan company; has trained and managed teams of new starters.
 
 ## Pages
 - [Home](https://www.castilliai.com/): what Castilliai does, its products and how it works.
+- [MTD Software Compare](https://mtdsoftwarecompare.co.uk/): free comparison of 179 HMRC-recognised Making Tax Digital for Income Tax products for landlords and sole traders.
 - [Consumer Credit & Debt Complaints and Arrears Toolkit](https://www.castilliai.com/compliance-toolkit/): product details, launch pricing (£199 full toolkit, £79 letters-only pack) and waitlist.
 - [About Daniel Wyatt](https://www.castilliai.com/about/): the founder's background.
 - [Founders Blog](https://www.castilliai.com/founders-blog/): posts from the founder, starting with "Why I built Castilliai".
