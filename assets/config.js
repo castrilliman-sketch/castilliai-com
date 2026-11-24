@@ -2,10 +2,10 @@
    Castilliai site settings: edit this one file.
    ============================================================ */
 window.CASTILLIAI_CONFIG = {
-  // MTD Software Compare site. While this is "[MTD SITE LINK]" (or empty),
-  // the MTD buttons show "Launching soon". Paste the full URL to switch them on,
-  // e.g. "https://www.mtdsoftwarecompare.co.uk/"
-  MTD_SITE_URL: "https://mtdsoftwarecompare.co.uk",
+  // MTD Software Compare site. Pages now link to this URL in the HTML.
+  // If any leftover [data-mtd-link] placeholders remain, this still switches them on.
+  // While this is "[MTD SITE LINK]" (or empty), those placeholders show "Launching soon".
+  MTD_SITE_URL: "https://mtdsoftwarecompare.co.uk/",
 
   // Contact email shown across the site (every link marked data-contact).
   CONTACT_EMAIL: "customerservices@castilliai.com",
